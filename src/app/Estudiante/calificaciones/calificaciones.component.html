@@ -1,0 +1,43 @@
+<app-menu-estudiantes></app-menu-estudiantes>
+
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="text-center">Calificaciones del Estudiante</h3>
+
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Detalle</th>
+                <th scope="col">Materia</th>
+                <th scope="col">Calificacion</th>
+                <th scope="col">Accion</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let estudiante of aux">
+                <th scope="row">{{estudiante.tipo}}</th>
+                <td>{{estudiante.detalle}}</td>
+                <td>{{estudiante.materia}}</td>
+                <td>{{estudiante.calificacion}}</td>
+                <td>Imprimir</td>
+              </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>

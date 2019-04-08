@@ -1,0 +1,27 @@
+<app-menu-estudiantes></app-menu-estudiantes>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card bg-light" style="height: 70px" align="center">
+      <h3>Colección de Cuentos</h3>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-12">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4"  *ngFor=" let nombre of aux">
+          <div class="card" (click)="irCuento(nombre.id)" routerLink="/tratamiento/contenido" style="height: 275px; width: 250px">
+            <div align="center" height="200" width="200"><img [src]="nombre?.imagen1" height="200px" width="150px"
+                                                              alt="Card image cap"></div>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">{{nombre?.cuento}}
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

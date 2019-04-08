@@ -1,0 +1,119 @@
+<app-menu-profesores></app-menu-profesores>
+
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="text-center">Informacion</h3>
+
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-sm-5"><img [src]="imgURL" height="200" *ngIf="imgURL">
+                <input #file type="file" accept='image/*' (change)="onFileChange($event)" #fileInput
+                       accept=".jpeg,.jpg" (change)="preview(file.files)"/>
+              </div>
+              <div class="col-sm-1"></div>
+              <div class="col-sm-6" align="right">
+                <button type="submit" class="btn btn-warning">Actualizar Imagen</button>
+              </div>
+            </div>
+
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input class="form-control" [(ngModel)]="nombre" name="nombre" [value]="usuario.nombre">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Apellido</label>
+              <input class="form-control" [(ngModel)]="apellido" name="apellido" [value]="usuario.apellido">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" [(ngModel)]="email" name="email" [value]="usuario.email" class="form-control">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Nick</label>
+              <input type="email" [(ngModel)]="nick" name="nick" [value]="usuario.nick" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Cedula</label>
+              <input type="email" [(ngModel)]="cedula" name="cedula" [value]="usuario.cedula" class="form-control">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Fecha Nacimiento</label>
+              <input type="email" readonly="readonly" [(ngModel)]="fecha_nacimiento" name="fecha_nacimiento"
+                     [value]="usuario.fecha_nacimiento" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Grado de Educacion Basica</label>
+              <input type="email" readonly="readonly" [(ngModel)]="grado" name="grado" [value]="usuario.grado"
+                     class="form-control">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Unidad Educativa</label>
+              <input type="email" [(ngModel)]="unidad_educativa" name="unidad_educativa"
+                     [value]="usuario.unidad_educativa" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Telefono</label>
+              <input class="form-control" [(ngModel)]="telefono" name="telefono" [value]="usuario.telefono">
+
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>AMIE</label>
+              <input class="form-control"
+                     [(ngModel)]="amie" name="amie"
+                     type="text" [value]="usuario.amie">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Contraseña</label>
+              <input class="form-control"
+                     [(ngModel)]="password" name="password"
+                     type="password" [value]="usuario.password">
+
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-warning" (click)="actualizar()"> Actualizar</button>
+
+      </div>
+    </div>
+  </div>
+</div>

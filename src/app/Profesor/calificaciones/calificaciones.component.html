@@ -1,0 +1,48 @@
+<app-menu-profesores></app-menu-profesores>
+
+
+<div class="row">
+  <div class="col-sm-12" align="center">
+    <div class="card bg-light" style="height: 70px" align="center">
+      <h3 class="animated bounceIn">
+        Lista de Estudiantes
+      </h3>
+    </div>
+  </div>
+    <div class="col-sm-12" align="center">
+      <div class="form-group">
+        <input class="form-control " [(ngModel)]="searchText" type="search" placeholder="Buscar Estudiante...."
+               aria-label="Search">
+      </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Foto</th>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Accion</th>
+      </tr>
+      </thead>
+      <tbody *ngFor=" let nombre of arrayEstudiantes | search: searchText; let indice=index ">
+      <tr *ngFor="let estudiante of estudiantes">
+        <td *ngIf="estudiante.nombre== nombre && indice<=5"><img src="http://200.124.230.132:3100/public/users/{{estudiante.nombreFoto}}" height="70px"
+                                                                 width="70px"></td>
+        <td *ngIf="estudiante.nombre== nombre && indice<=5">{{estudiante.cedula}}</td>
+        <td *ngIf="estudiante.nombre== nombre && indice<=5">{{estudiante.nombre}} {{estudiante.apellido}}</td>
+
+        <td *ngIf="estudiante.nombre== nombre && indice<=5">
+          <button routerLink="/profesor/calificacion/detalle" (click)="irDetalle(estudiante.id)"><i class="far fa-eye"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+

@@ -1,0 +1,76 @@
+<div class="row">
+  <div class="col-sm-9">
+    <body></body>
+  </div>
+
+
+  <div class="col-sm-3">
+    <div class="login-page">
+
+      <div class="form">
+        <div class="row">
+          <img src="../../assets/c2vizLogo.png" width="85" height="30"
+               class="d-inline-block align-top" alt="">
+        </div>
+        <div class="row">
+          <div class="col-sm-12"><h3>HelpDys</h3></div>
+          <div align="center">
+
+          </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8"><h3>Login</h3></div>
+          <div class="col-sm-2"></div>
+          <div align="center">
+          </div>
+        </div>
+        <div class="row">
+        </div>
+        <div class="login-form">
+          <input type="text" name="usuario" placeholder="Nick" [(ngModel)]="usuario" required
+                 #emailInput="ngModel"/>
+          <div class="alert alert-warning" role="alert" *ngIf="emailInput.dirty && emailInput.errors">
+            <p *ngIf="emailInput.errors.required">
+              Campo requerido
+            </p>
+          </div>
+          <input type="password" placeholder="Password" [(ngModel)]="contrasena" name="contrasena" required
+                 #loginInput="ngModel">
+          <div class="alert alert-warning" role="alert" *ngIf="loginInput.dirty && loginInput.errors">
+            <p *ngIf="loginInput.errors.required">
+              Campo requerido
+            </p>
+          </div>
+          <div style="line-height:70pt;">
+            Tipo de Usuario
+            <select class="bg-primary" [(ngModel)]='tipo_usuario' #selectElem (change)="setNewUser(selectElem.value)">
+              <option [value]='profesor'>Profesor</option>
+              <option [value]='estudiante'>Estudiante</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn btn-block btn-primary"
+                (click)="sendLogin()" [(ngModel)]="boton1" #boton="ngModel" (valid)="boton1==true">Ingresar
+        </button>
+        <div style="line-height:70pt;">
+          <a class="bg-light" routerLink="/wellcome">Ingreso sin Registro</a> |
+          <a class="bg-light" routerLink="/registro">Registro</a>
+        </div>
+        <div
+          class="alert alert-warning"
+          role="alert"
+          *ngIf="boton1==false">
+          <p>
+            Contraseña incorrecta
+          </p>
+        </div>
+      </div>
+      <div><p></p></div>
+    </div>
+  </div>
+</div>
+

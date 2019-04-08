@@ -1,0 +1,33 @@
+body {
+  background: #1e73b8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #2330b8, #437dc2);
+  background: -moz-linear-gradient(right, #2a54b8, #1b36c2);
+  background: -o-linear-gradient(right, #2a54b8, #1b36c2);
+  background: linear-gradient(to left, #2a54b8, #1b36c2);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("http://footage.framepool.com/shotimg/qf/675233976-aula-de-clases-profesor-6-9-anos-escritorio.jpg");
+  background-repeat: no-repeat;
+  height: -webkit-fill-available;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Numans', sans-serif;
+}
+
+a{
+  color: #2e37ff;
+  font-size: 12px;
+}
+
+p{
+  font-size: 16px;
+}
+
+h3{
+  font-size: 20px;
+}
+
+.opacity{
+  opacity:0.8; /* Opacidad 60% */
+}

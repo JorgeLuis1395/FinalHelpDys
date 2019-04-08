@@ -1,0 +1,37 @@
+import {Component, Input, OnInit} from '@angular/core';
+import {DislexiaFonologicaComponent} from "../../../prediagnostico/dislexia-fonologica/dislexia-fonologica.component";
+import {DislexiaVisualComponent} from "../../../prediagnostico/dislexia-visual/dislexia-visual.component";
+
+@Component({
+  selector: 'app-juego2',
+  templateUrl: './juego2.component.html',
+  styleUrls: ['./juego2.component.css']
+})
+export class Juego2Component implements OnInit {
+
+
+  @Input() nombre:string;
+  @Input() indice:number;
+  @Input() palabraCorrecta:string;
+
+  constructor(
+    private dislexiaComponente : DislexiaVisualComponent
+  ) { }
+
+  ngOnInit() {
+  }
+
+  seleccionoButton() {
+
+    var buttonSelect = document.getElementById('button'+this.indice);
+    console.log('selecciono el  ' + buttonSelect.textContent)
+
+    if(buttonSelect.textContent != this.palabraCorrecta){
+      DislexiaVisualComponent.puntajeJuego2 = DislexiaVisualComponent.puntajeJuego2 - 5;
+    }
+
+    this.dislexiaComponente.siguientePalabra();
+    console.log('puntajeJuego2 ' + DislexiaVisualComponent.puntajeJuego2)
+  }
+
+}

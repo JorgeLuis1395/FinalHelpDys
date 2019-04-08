@@ -1,0 +1,37 @@
+<app-menu-profesores></app-menu-profesores>
+<div class="row">
+  <div class="col-sm-12" align="center">
+    <div class="card bg-light" style="height: 70px" align="center">
+      <h3 class="animated bounceIn">
+        Lista de Estudiantes
+      </h3>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Foto</th>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Nick</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let estudiante of aux">
+        <th scope="row"><img src="http://200.124.230.132:3100/public/users/{{estudiante.nombreFoto}}" height="70px"
+                             width="70px"></th>
+        <td >{{estudiante.cedula}}</td>
+        <td>{{estudiante.nombre}} {{estudiante.apellido}}</td>
+        <td>{{estudiante.nick}}</td>
+      </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-sm-2"></div>
+</div>
