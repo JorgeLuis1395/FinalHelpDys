@@ -46,7 +46,7 @@ export class RegistroComponent implements OnInit {
     this._estudiante.getUsuario().then(data => {
       this.usuario = data;
       console.log(this.usuario);
-      this.imgURL = "http://200.124.230.132:3100/public/users/"+ Object.values(data)[12]
+      this.imgURL = this.global.apiUrl+"/public/users/"+ Object.values(data)[12]
 
       this.nombre = Object.values(data)[1];
       this.apellido = Object.values(data)[2];
@@ -101,7 +101,7 @@ export class RegistroComponent implements OnInit {
 
   guardar() {
 
-    this.http.post('http://200.124.230.132:3100/usuario' ,
+    this.http.post(this.global.apiUrl+'/usuario' ,
       {
         nombre: this.nombre,
         apellido: this.apellido,

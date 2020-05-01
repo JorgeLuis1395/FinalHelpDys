@@ -143,7 +143,7 @@ export class DislexiaVisualComponent implements OnInit {
       );
     });
   }
-  getBase64ImageFromURL(url= `http://200.124.230.132:3100/public/users/${Object.values(this.estudiante)[12]}` ) {
+  getBase64ImageFromURL(url= this.global.apiUrl+`/public/users/${Object.values(this.estudiante)[12]}` ) {
     return Observable.create((observer: Observer<string>) => {
       // create an image object
       let img = new Image();
@@ -181,7 +181,7 @@ export class DislexiaVisualComponent implements OnInit {
 
 
   getImage() {
-    this.auxImagen = `http://200.124.230.132:3100/public/users/${Object.values(this.estudiante)[12]}`
+    this.auxImagen = this.global.apiUrl+`/public/users/${Object.values(this.estudiante)[12]}`
     this.getBase64ImageFromURL(this.auxImagen ).subscribe((data:string) => {
       this.base64TrimmedURL = data;
     });

@@ -5,7 +5,7 @@ import {Observable} from "rxjs";
 
 @Injectable()
 export class InformacionEstudianteService {
-  apiUrl = 'http://200.124.230.132:3100';
+  apiUrl = this.global.apiUrl;
 
   constructor(public http: HttpClient, public global: VariablesGlobales) {
   }

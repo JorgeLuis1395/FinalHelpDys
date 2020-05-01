@@ -30,7 +30,7 @@
       </thead>
       <tbody *ngFor=" let nombre of arrayEstudiantes | search: searchText; let indice=index ">
       <tr *ngFor="let estudiante of estudiantes">
-        <td *ngIf="estudiante.nombre== nombre && indice<=5"><img src="http://200.124.230.132:3100/public/users/{{estudiante.nombreFoto}}" height="70px"
+        <td *ngIf="estudiante.nombre== nombre && indice<=5"><img src="{{globales.apiUrl}}/public/users/{{estudiante.nombreFoto}}" height="70px"
                                                                  width="70px"></td>
         <td *ngIf="estudiante.nombre== nombre && indice<=5">{{estudiante.cedula}}</td>
         <td *ngIf="estudiante.nombre== nombre && indice<=5">{{estudiante.nombre}} {{estudiante.apellido}}</td>

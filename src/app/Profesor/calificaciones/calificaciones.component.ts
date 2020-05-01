@@ -15,12 +15,12 @@ export class CalificacionesComponent implements OnInit {
 
   j: string;
 
-  constructor(private httpClient: HttpClient, private variables: VariablesGlobales) {
+  constructor(private httpClient: HttpClient, private globales: VariablesGlobales) {
   }
 
   ngOnInit() {
     const observableUsuarios = this.httpClient
-      .get('http://200.124.230.132:3100/usuario/' + this.variables.nick, {headers: new HttpHeaders({'Authorization': 'Bearer ' + this.variables.tokenUsuario})});
+      .get(this.globales.apiUrl+'/usuario/' + this.globales.nick, {headers: new HttpHeaders({'Authorization': 'Bearer ' + this.globales.tokenUsuario})});
     observableUsuarios
       .subscribe(
         results => {
@@ -46,7 +46,7 @@ export class CalificacionesComponent implements OnInit {
   }
 
   irDetalle(idEstudiante) {
-    this.variables.idEstudiante = idEstudiante
+    this.globales.idEstudiante = idEstudiante
     console.log(idEstudiante);
   }
 

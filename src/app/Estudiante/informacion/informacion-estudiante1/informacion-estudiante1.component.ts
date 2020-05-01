@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {VariablesGlobales} from "../../../services/variables-globales";
 
 @Component({
   selector: 'app-informacion-estudiante1',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InformacionEstudiante1Component implements OnInit {
 
-  constructor() { }
+  constructor(private global: VariablesGlobales) { }
 
   ngOnInit() {
   }

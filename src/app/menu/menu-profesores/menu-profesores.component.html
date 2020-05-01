@@ -41,7 +41,7 @@
 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="http://200.124.230.132:3100/public/users/{{usuario?.nombreFoto}}" >
+        <img src="{{this.global.apiUrl}}/public/users/{{usuario?.nombreFoto}}" >
         {{usuario?.nombre}}
         {{usuario?.apellido}}
       </a>

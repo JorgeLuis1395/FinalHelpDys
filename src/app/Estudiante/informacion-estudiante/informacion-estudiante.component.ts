@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UsuarioService} from "../../services/usuario.service";
 import {InformacionEstudianteService} from "../../services/informacion-estudiante.service";
+import {VariablesGlobales} from "../../services/variables-globales";
 
 @Component({
   selector: 'app-informacion-estudiante',
@@ -9,7 +10,7 @@ import {InformacionEstudianteService} from "../../services/informacion-estudiant
 })
 export class InformacionEstudianteComponent implements OnInit {
   usuario: any;
-  constructor(public _estudiante: InformacionEstudianteService) { }
+  constructor(public _estudiante: InformacionEstudianteService, private global: VariablesGlobales) { }
 
   ngOnInit() {
     this.getUser()

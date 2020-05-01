@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import {environment} from '../../environments/environment';
 @Injectable()
 export class VariablesGlobales {
   nick: string ;
@@ -8,5 +8,6 @@ export class VariablesGlobales {
   idEstudiante: number;
   idEstudianteRegistrado: number;
   idCuento: number;
+  apiUrl = environment.apiUrl;
   idpuntaje: number;
 }

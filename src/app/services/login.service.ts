@@ -5,10 +5,10 @@ import {VariablesGlobales} from "./variables-globales";
 @Injectable()
 export class LoginService {
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private global: VariablesGlobales) {
   }
 
-  apiUrl = 'http://200.124.230.132:3100';
+  apiUrl = this.global.apiUrl;
 
   postLogin(nick, password) {
     const param = {

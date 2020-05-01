@@ -22,7 +22,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let estudiante of aux">
-        <th scope="row"><img src="http://200.124.230.132:3100/public/users/{{estudiante.nombreFoto}}" height="70px"
+        <th scope="row"><img src="{{this.global.apiUrl}}/public/users/{{estudiante.nombreFoto}}" height="70px"
                              width="70px"></th>
         <td >{{estudiante.cedula}}</td>
         <td>{{estudiante.nombre}} {{estudiante.apellido}}</td>

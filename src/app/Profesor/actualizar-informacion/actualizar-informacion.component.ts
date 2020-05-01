@@ -46,7 +46,7 @@ export class ActualizarInformacionComponent implements OnInit {
     this._estudiante.getUsuario().then(data => {
       this.usuario = data;
       console.log(this.usuario);
-      this.imgURL = "http://200.124.230.132:3100/public/users/"+ Object.values(data)[12]
+      this.imgURL = this.global.apiUrl+"/public/users/"+ Object.values(data)[12]
 
      this.nombre = Object.values(data)[1];
       this.apellido = Object.values(data)[2];
@@ -101,7 +101,7 @@ export class ActualizarInformacionComponent implements OnInit {
 
   actualizar() {
 
-    this.http.put('http://200.124.230.132:3100/usuario/' + this.global.idProfesor,
+    this.http.put(this.global.apiUrl+'/usuario/' + this.global.idProfesor,
       {
         nombre: this.nombre,
         apellido: this.apellido,

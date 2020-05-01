@@ -96,7 +96,7 @@ export class EditarInfoEstudianteComponent implements OnInit {
   }
 
   updateEtudiante() {
-    this.http.put('http://200.124.230.132:3100/estudiante/' + this.global.idEstudianteRegistrado,
+    this.http.put(this.global.apiUrl+'/estudiante/' + this.global.idEstudianteRegistrado,
       {
     nombre : this.nombre,
     apellido : this.apellido,

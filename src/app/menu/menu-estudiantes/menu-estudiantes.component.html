@@ -31,8 +31,8 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/Tratamiento/Juegos"> <i class="fab fa-playstation"></i> Juegos</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/estudiante/videos"><i class="fab fa-youtube"></i> Videos</a><div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/estudiante/imagenes"><i class="fas fa-images"></i> Imagenes</a><div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Tratamiento/Videos"><i class="fab fa-youtube"></i> Videos</a><div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Tratamiento/Imagenes"><i class="fas fa-images"></i> Imagenes</a><div class="dropdown-divider"></div>
         </div>
       </li>
       <li class="nav-item">
@@ -44,7 +44,7 @@
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-        <img src="http://200.124.230.132:3100/public/users/{{usuario?.nombreFoto}}" >
+        <img src="{{this.global.apiUrl}}/public/users/{{usuario?.nombreFoto}}" >
         {{usuario.nombre}}{{usuario.apellido}}
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
