@@ -1,8 +1,10 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatSort, MatTableDataSource} from "@angular/material";
 import {HttpClient} from "@angular/common/http";
 import {VariablesGlobales} from "../../services/variables-globales";
 import {UsuarioService} from "../../services/usuario.service";
+import {MatPaginator} from "@angular/material/paginator";
+import {MatSort} from "@angular/material/sort";
+import {MatTableDataSource} from "@angular/material/table";
 
 @Component({
   selector: 'app-calificaciones-agregar',

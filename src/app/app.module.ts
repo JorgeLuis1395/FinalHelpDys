@@ -73,7 +73,6 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-import {MatCheckboxModule, MatPaginatorModule, MatSlideToggleModule} from "@angular/material";
 import {MatCardModule} from '@angular/material/card';
 import { AgendaComponent } from './Profesor/agenda/agenda.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
@@ -85,6 +84,9 @@ import {Memoria1GeneralComponent} from "./General/Recursos/juegos/memoria/memori
 import { ContenidoComponent } from './Tratamiento/cuentos/contenido/contenido.component';
 import { ContenidoGeneralComponent } from './General/Recursos/cuentos/contenido-general/contenido-general.component';
 import {CalificacionesEstudianteComponent} from "./Estudiante/calificaciones/calificaciones.component";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [

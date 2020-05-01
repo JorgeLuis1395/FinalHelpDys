@@ -134,5 +134,8 @@
       }
     }
   },
-  "defaultProject": "Tesis"
+  "defaultProject": "Tesis",
+  "cli": {
+    "analytics": "b1793ca1-99bc-4af0-b2d0-b193791f487e"
+  }
 }

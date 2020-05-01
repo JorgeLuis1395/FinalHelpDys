@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" >
   <div class="col-sm-9">
     <body></body>
   </div>
@@ -9,8 +9,8 @@
 
       <div class="form">
         <div class="row">
-          <img src="../../assets/c2vizLogo.png" width="85" height="30"
-               class="d-inline-block align-top" alt="">
+          <!--<img src="../../assets/help" width="85" height="30"
+               class="d-inline-block align-top" alt="">-->
         </div>
         <div class="row">
           <div class="col-sm-12"><h3>HelpDys</h3></div>
@@ -46,7 +46,7 @@
           </div>
           <div style="line-height:70pt;">
             Tipo de Usuario
-            <select class="bg-primary" [(ngModel)]='tipo_usuario' #selectElem (change)="setNewUser(selectElem.value)">
+            <select class="bg-primary " [(ngModel)]='tipo_usuario' #selectElem (change)="setNewUser(selectElem.value)">
               <option [value]='profesor'>Profesor</option>
               <option [value]='estudiante'>Estudiante</option>
             </select>
