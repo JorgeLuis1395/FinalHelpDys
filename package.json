@@ -37,6 +37,7 @@
     "ng-flash-messages": "^0.3.0",
     "ng-fullcalendar": "^2.0.3",
     "rxjs": "~6.5.5",
+    "sweetalert2": "^9.10.12",
     "tslib": "^1.11.1",
     "zone.js": "~0.10.3"
   },

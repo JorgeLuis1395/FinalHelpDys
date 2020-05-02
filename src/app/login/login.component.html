@@ -1,4 +1,4 @@
-<div class="row" >
+<!--<div class="row">
   <div class="col-sm-9">
     <body></body>
   </div>
@@ -10,7 +10,7 @@
       <div class="form">
         <div class="row">
           <!--<img src="../../assets/help" width="85" height="30"
-               class="d-inline-block align-top" alt="">-->
+               class="d-inline-block align-top" alt="">
         </div>
         <div class="row">
           <div class="col-sm-12"><h3>HelpDys</h3></div>
@@ -73,4 +73,60 @@
     </div>
   </div>
 </div>
+-->
 
+<body style="background-color: #666666;">
+
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form class="login100-form validate-form">
+					<span class="login100-form-title p-b-43">
+						Login to continue
+					</span>
+
+
+        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="usuario" placeholder="Nick" [(ngModel)]="usuario" required
+                 #emailInput="ngModel"/>
+          <div class="alert alert-warning" role="alert" *ngIf="emailInput.dirty && emailInput.errors">
+            <p *ngIf="emailInput.errors.required">
+              Campo requerido
+            </p>
+          </div>
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+          <input class="input100" type="password" placeholder="Password" [(ngModel)]="contrasena" name="contrasena"
+                 required
+                 #loginInput="ngModel">
+          <div class="alert alert-warning" role="alert" *ngIf="loginInput.dirty && loginInput.errors">
+            <p *ngIf="loginInput.errors.required">
+              Campo requerido
+            </p>
+          </div>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" (click)="seleccionPerfil()" [(ngModel)]="boton1" #boton="ngModel" (valid)="boton1==true">
+            Ingreso
+          </button>
+        </div>
+
+        <div class="text-center p-t-46 p-b-20">
+          <div style="line-height:70pt;">
+            <a  class="bg-light" routerLink="/wellcome">Ingreso sin Registro</a> |
+            <a class="bg-light" routerLink="/registro">Registro</a>
+          </div>
+        </div>
+      </form>
+
+      <div class="login100-more" style="background-image: url('/assets/fondos/imagencali6.jpg');">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>

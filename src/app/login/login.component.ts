@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {LoginService} from "../services/login.service";
 import {Router} from "@angular/router";
 import {VariablesGlobales} from "../services/variables-globales";
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   usuario = '';
   boton1 = true;
   user: any;
-  tipo_usuario : string;
+  tipo_usuario: string;
   profesor?
   estudiante?
 
@@ -28,13 +29,15 @@ export class LoginComponent implements OnInit {
   select() {
     console.log(this.tipo_usuario)
   }
+
   setNewUser(id: any): void {
-   if(id =="Profesor"){
-    this.sendLogin()
-   }else{
-    this.sendLoginEstudiante()
-   }
+    if (id == "Profesor") {
+      this.sendLogin()
+    } else {
+      this.sendLoginEstudiante()
+    }
   }
+
   sendLogin() {
     this._login.postLogin(this.usuario, this.contrasena).then((result) => {
       this.global.nick = this.usuario;
@@ -44,7 +47,7 @@ export class LoginComponent implements OnInit {
       ];
       this._router.navigate(rutaHomeUsuario);
     }, (err) => {
-      alert("Credenciales Incorrectas");
+      this.registroIncorrecto()
     });
   }
 
@@ -57,8 +60,49 @@ export class LoginComponent implements OnInit {
       ];
       this._router.navigate(rutaHomeUsuario);
     }, (err) => {
-      alert("Credenciales Incorrectas");
+      this.registroIncorrecto()
     });
+  }
+
+  async seleccionPerfil() {
+
+    const {value: perfil} = await Swal.fire({
+      title: 'Selecciona tu Perfil',
+      input: 'select',
+      icon: 'question',
+      inputOptions: {
+        profesor: 'Profesor',
+        estudiante: 'Estudiante',
+      },
+      inputPlaceholder: 'Selecciona tu perfil',
+      showCancelButton: true,
+      inputValidator: (value) => {
+        return new Promise((resolve) => {
+          if (value === 'profesor') {
+            resolve()
+            this.sendLogin()
+          } else {
+            if (value === 'estudiante') {
+              resolve()
+              this.sendLoginEstudiante()
+            }
+          }
+        })
+      }
+    })
+
+    if (perfil) {
+      Swal.fire(`Tu perfil es: ${perfil}`)
+    }
+  }
+
+  registroIncorrecto() {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Tus credenciales son incorrectas por favor intentalo de nuevo',
+      icon: 'error',
+      confirmButtonText: 'Aceptar'
+    })
   }
 
 }
