@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FlashMessagesService} from "angular2-flash-messages";
+import Swal from "sweetalert2";
 
 @Component({
   selector: 'app-memoria',
@@ -73,12 +74,14 @@ export class MemoriaGeneralComponent implements OnInit {
       }
     }
     if (this.aciertos == this.count_aciertos) {
-      this.flashMensaje.show('Ganaste.', {cssClass: 'alert-success', timeout: 10000});
-      window.location.reload();
+      //this.flashMensaje.show('Ganaste.', {cssClass: 'alert-success', timeout: 10000});
+      //window.location.reload();
+      this.ganaste()
     }
     if (this.cont_intentos == this.intentos - 1) {
-      this.flashMensaje.show('=( PERDISTE.', {cssClass: 'alert-success', timeout: 10000});
-      window.location.reload();
+     // this.flashMensaje.show('=( PERDISTE.', {cssClass: 'alert-success', timeout: 10000});
+      //window.location.reload();
+      this.perdiste()
     }
     this.cont_intentos++;
 
@@ -98,5 +101,51 @@ export class MemoriaGeneralComponent implements OnInit {
     }
 
     return array;
+  }
+
+  perdiste() {
+    Swal.fire({
+      title: 'Se te acabaron los intentos. Por favor intentalo de nuevo',
+      width: 600,
+      padding: '3em',
+      background: '#fff url(/images/trees.png)',
+      backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://gifsanimados.de/img-gifsanimados.de/c/caritas/carita-lagrima.gif")
+    center top
+    no-repeat
+  `,
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Quieres intentarlo de nuevo'
+    }).then((result) => {
+      if (result.value) {
+        window.location.reload();
+      }
+    })
+  }
+
+  ganaste() {
+    Swal.fire({
+      title: 'Felicitaciones !!!! Ganaste que excelente memoria',
+      width: 600,
+      padding: '3em',
+      background: '#fff url(/images/trees.png)',
+      backdrop: `
+    rgba(0,0,123,0.4)
+    url("https://gifsanimados.de/img-gifsanimados.de/c/caritas/carita-guino.gif")
+    center top
+    no-repeat
+  `,
+      showCancelButton: true,
+      confirmButtonColor: '#49d630',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Quieres jugar otra vez'
+    }).then((result) => {
+      if (result.value) {
+        window.location.reload();
+      }
+    })
   }
 }
