@@ -7,12 +7,12 @@
 
 
 .borde:hover{
-  border-color: #4f60ff;
+  border-color: #69ff4f;
 }
 
 .contenedor {
   text-align: center;
-  background-color: deepskyblue;
+  background-color: #edf5ee;
   cursor:pointer;
 }
 
