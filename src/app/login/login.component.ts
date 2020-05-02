@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {LoginService} from "../services/login.service";
 import {Router} from "@angular/router";
 import {VariablesGlobales} from "../services/variables-globales";
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
