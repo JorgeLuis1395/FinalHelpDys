@@ -1,12 +1,25 @@
 <app-menu-general></app-menu-general>
-<div class="row">
+<body>
+<div class="card-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card mb-3 opacity" align="center" style="max-width: 1400px; height: 40px; margin-top: 0px">
+        <div class="card bg-light" style="height: 50px" align="center">
+          <h2>Da clic sobre la letra o vocal para completar la palabra</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--<div class="row">
   <div class="col-sm-12">
     <div class="card bg-light" style="height: 70px" align="center">
       <h3>Da clic sobre la letra o vocal para completar la palabra</h3>
 
     </div>
   </div>
-</div>
+</div>-->
+
 <div class="row">
   <div class="col-sm-2"></div>
   <div class="col-sm-4" align="center"><img src="assets/img/{{ intentos }}.png" class="ahorcado-img" width="200"
@@ -55,3 +68,5 @@
     <button class="btn btn-dark btn-primary" (click)="consultarNuevaPalabra()">Siguiente Palabra</button>
   </div>
 </div>
+</div>
+</body>

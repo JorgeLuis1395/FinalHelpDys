@@ -1,30 +1,38 @@
 <app-menu-general></app-menu-general>
-<div class="row ">
-  <div class="card bg-light col-sm-12 ">
-    <h3 align="center" style="color: #1a1a1a"> Historias sobre la Dislexia</h3>
+<body>
+<div class="card-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card mb-3 opacity" align="center" style="max-width: 1400px; height: 40px; margin-top: 0px">
+        <div class="card bg-light" style="height: 50px" align="center">
+          <h2>Historias sobre la Dislexia</h2>
+        </div>
+      </div>
+    </div>
   </div>
+
+<div class="row ">
   <div class="col-sm-12 ">
-    <h4 align="center"> Da clic sobre el Video a Utilizar</h4>
+    <h4 align="center"> Da clic sobre el Video</h4>
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-4">
         <div class="row contenedor ">
           <div class="col-sm-12 borde">
             <h5 (click)="mostrarComponente = !mostrarComponente">
               Famosos con Dislexia
             </h5>
-            <div class="col-sm-12" align="center">
+            <div class="col-sm-8" align="center">
               <div *ngIf="mostrarComponente" align="center">
                 <br>
-                <iframe align="center" width="815" height="515" src="https://www.youtube.com/embed/D7CieBZxiB0"
+                <iframe align="center" width="515" height="415" src="https://www.youtube.com/embed/D7CieBZxiB0"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </div>
             </div>
 
             <div class="col-sm-12" *ngIf="mostrarComponente">
-              <br>
               <br>
               <h6>
                 <p>
@@ -146,4 +154,6 @@
     <br>
   </div>
 </div>
+</div>
+</body>
 

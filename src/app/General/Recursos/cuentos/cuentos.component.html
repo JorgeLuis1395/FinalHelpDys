@@ -1,22 +1,27 @@
 <app-menu-general></app-menu-general>
+<body>
+
+<div class="card-body">
 <div class="row">
   <div class="col-sm-12">
-    <div class="card bg-light" style="height: 70px" align="center">
-      <h3>Colección de Cuentos</h3>
+    <div class="card mb-3 opacity" align="center" style="max-width: 1400px; height: 40px; margin-top: 0px">
+    <div class="card bg-light" style="height: 50px" align="center">
+      <h2><b>Colección de Cuentos</b></h2>
+    </div>
     </div>
   </div>
 </div>
 
 <div class="col-sm-12">
-  <div class="jumbotron jumbotron-fluid">
+  <div class="card mb-3 opacity" align="center" style="max-width: 2000px; height: 40px; margin-top: 0px">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4"  *ngFor=" let nombre of aux">
-          <div class="card" (click)="irCuento(nombre.id)" routerLink="/general/cuentos/contenido" style="height: 275px; width: 250px">
-            <div align="center" height="200" width="200"><img [src]="nombre?.portada" height="200px" width="150px"
+        <div class="col-sm-3"  *ngFor=" let nombre of aux">
+          <div class="card" (click)="irCuento(nombre.id)" routerLink="/general/cuentos/contenido" style="height: 225px; width: 175px">
+            <div align="center" height="100" width="100"><img [src]="nombre?.portada" height="120px" width="90px"
                                                               alt="Card image cap"></div>
             <div class="card-body">
-              <h5 class="card-title" style="text-align: center">{{nombre?.cuento}}
+              <h5 class="card-title" style="text-align: center"><b>{{nombre?.cuento}}</b>
               </h5>
             </div>
           </div>
@@ -25,4 +30,7 @@
     </div>
   </div>
 </div>
+</div>
+
+</body>
 

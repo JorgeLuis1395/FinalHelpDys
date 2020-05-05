@@ -1,3 +1,23 @@
+body {
+  background: #1e73b8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #2330b8, #437dc2);
+  background: -moz-linear-gradient(right, #2a54b8, #1b36c2);
+  background: -o-linear-gradient(right, #2a54b8, #1b36c2);
+  background: linear-gradient(to left, #2a54b8, #1b36c2);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('src/assets/fondos/foto_fondo1_01.jpg');
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Numans', sans-serif;
+}
+
+.opacity{
+  opacity:0.8; /* Opacidad 60% */
+}
 
 .borde{
   border-style: solid;
@@ -25,6 +45,10 @@ h2{
   color: #292929;
 }
 h3{
+  color: white;
+}
+
+h4{
   color: white;
 }
 
