@@ -1,8 +1,8 @@
 
 .register{
   background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-  margin-top: 3%;
-  padding: 3%;
+  margin-top: 0%;
+  padding: 0%;
 }
 .register-left{
   text-align: center;
@@ -23,8 +23,8 @@
 }
 .register-right{
   background: #f8f9fa;
-  border-top-left-radius: 10% 50%;
-  border-bottom-left-radius: 10% 50%;
+  border-top-left-radius: 0% 0%;
+  border-bottom-left-radius: 0% 0%;
 }
 .register-left img{
   margin-top: 15%;
