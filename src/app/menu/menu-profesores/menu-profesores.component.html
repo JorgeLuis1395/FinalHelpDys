@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-warning" xmlns:http="http://www.w3.org/1999/xhtml">
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e2d5c2" >
   <a class="navbar-brand" routerLink="/profesor/wellcome">HelpDys</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -6,8 +6,8 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkInformacion" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="far fa-question-circle"></i> Informacion
+        <a class="nav-link dropdown-toggle" style="color: #111111" href="#" id="navbarDropdownMenuLinkInformacion" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-question-circle"></i> Información
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" routerLink="/Informacion/Dislexia1">¿Qué es la Dislexia?</a>
@@ -20,38 +20,37 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkEstudiante" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" style="color: #0a0a0a" href="#" id="navbarDropdownMenuLinkEstudiante" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-child"></i> Estudiante
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" routerLink="/profesor/calificacion"> <i class="fas fa-sort-numeric-up"></i> Calificaciones</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/profesor/nuevo/estudiante"><i class="fas fa-plus"></i>  <i class="fas fa-child"> </i> Registro Nuevo</a>
-          <a class="dropdown-item">Estudiante</a>
+          <a class="dropdown-item" routerLink="/profesor/nuevo/estudiante"><i class="fas fa-plus"></i>  <i class="fas fa-child"> </i>Nuevo Estudiante</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/profesor/estudiantes"><i class="fas fa-list-ul"></i> Lista</a><div class="dropdown-divider"></div>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/profesor/agenda"><i class="fas fa-calendar-week"></i> Agenda</a>
+      <li class="nav-item" >
+        <a class="nav-link" style="color: #0a0a0a" routerLink="/profesor/agenda"><i class="fas fa-calendar-week"></i> Agenda</a>
       </li>
     </ul>
   </div>
   <ul class="navbar-nav">
 
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <li class="nav-item dropdown" >
+      <a class="nav-link dropdown-toggle" style="color: #0a0a0a" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src="{{this.global.apiUrl}}/public/users/{{usuario?.nombreFoto}}" >
         {{usuario?.nombre}}
         {{usuario?.apellido}}
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" routerLink="/profesor/informacion">Informacion</a>
+        <a class="dropdown-item" routerLink="/profesor/informacion">Información</a>
         <a class="dropdown-item" routerLink="/profesor/informacion/actualizar">Actualizar</a>
       </div>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/tesis/login">Salir</a>
+    <li class="nav-item" >
+      <a class="nav-link" style="color: #0a0a0a" href="/tesis/login">Salir</a>
     </li>
   </ul>
 </nav>

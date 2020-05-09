@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UsuarioService} from "../../services/usuario.service";
-
+import {VariablesGlobales} from '../../services/variables-globales';
+import {ExcelService} from '../../services/excel.service';
 @Component({
   selector: 'app-estudiantes',
   templateUrl: './estudiantes.component.html',
@@ -8,8 +9,8 @@ import {UsuarioService} from "../../services/usuario.service";
 })
 export class EstudiantesComponent implements OnInit {
 
-  constructor( private listaEstusiantes: UsuarioService) { }
-
+  constructor( private listaEstusiantes: UsuarioService, private globales: VariablesGlobales){}
+  estudiante = [];
   usuario: any;
   aux: any;
   ngOnInit() {
@@ -19,9 +20,10 @@ export class EstudiantesComponent implements OnInit {
   getUser(){
     this.listaEstusiantes.getUsuario().then(data => {
       this.usuario = data;
+
       this.aux = Object.values(data)[14];
-      console.log("HOLA"+this.aux);
     });
   }
+
 
 }

@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {ROUTING} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
@@ -87,6 +87,11 @@ import {CalificacionesEstudianteComponent} from "./Estudiante/calificaciones/cal
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import {ExcelService} from './services/excel.service';
+import {registerLocaleData} from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import {FlatpickrModule} from 'angularx-flatpickr';
+registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
@@ -178,10 +183,13 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
-    })
+    }),
+    FlatpickrModule.forRoot(),
 
   ],
-  providers: [LoginService, VariablesGlobales, FlashMessagesService, UsuarioService, InformacionEstudianteService],
+  providers: [LoginService, ExcelService, VariablesGlobales, FlashMessagesService,
+    { provide: LOCALE_ID, useValue: 'es'},
+    UsuarioService, InformacionEstudianteService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

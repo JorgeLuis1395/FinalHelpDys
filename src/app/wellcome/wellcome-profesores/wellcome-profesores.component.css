@@ -7,7 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("http://footage.framepool.com/shotimg/qf/675233976-aula-de-clases-profesor-6-9-anos-escritorio.jpg");
+  background-image: url('src/assets/fondos/fondoProfe1.jpeg');
   background-repeat: no-repeat;
   height: 100%;
   background-size: cover;
