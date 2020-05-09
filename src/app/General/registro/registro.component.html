@@ -1,21 +1,18 @@
+
 <div class="container register">
   <div class="row">
     <div class="col-md-3 register-left">
-      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-      <h3>Bienvenido a HelpDys</h3>
+      <h3>HELDYS</h3>
+      <h3>Bienvenido</h3>
 
       <input type="submit" routerLink="/home" value="Login"/><br/>
     </div>
 
     <div class="col-md-9 register-right">
-      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profesor</a>
-        </li>
-      </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <h3 class="register-heading">Registro de Profesor</h3>
+          <form [formGroup]="usuarioForm" (ngSubmit)="guardar()" novalidate>
           <div class="row register-form">
             <form (ngSubmit)="onSubmit()">
               <div class="form-group" enctype="multipart/form-data">
@@ -24,62 +21,234 @@
                     <input #file type="file" accept='image/*' (change)="onFileChange($event)" #fileInput
                            accept=".jpeg,.jpg" (change)="preview(file.files)"/>
                   </div>
-                  <div class="col-sm-1"></div>
-                  <div class="col-sm-6" align="right">
-                    <button type="submit" class="btn btn-primary">Guardar Imagen</button>
-                  </div>
                 </div>
 
               </div>
             </form>
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre" placeholder="Nombre *" value="" />
+               <!-- <input type="text" class="form-control" [(ngModel)]="nombre" name="nombre" placeholder="Nombre *" value="" />-->
+                <input type="text" class="form-control" formControlName="nomUsu" [(ngModel)]="nombre"
+                       name="nombre" id="nombreUsuario" placeholder="Nombre *" (keypress)="_validacionService.letrasNumeros($event, 'l')"/>
+                <div *ngIf="usuarioForm.get('nomUsu').errors && usuarioForm.get('nomUsu').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('nomUsu').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('nomUsu').hasError('minlength')">
+            *Mínimo 3 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('nomUsu').hasError('maxlength')">
+            *Máximo 30 caracteres
+          </span>
+                </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="apellido" name="apellido" placeholder="Apellido *" value="" />
+                <input type="text" class="form-control" formControlName="ape" [(ngModel)]="apellido"
+                       name="apellido" id="apellidoUsuario" placeholder="Apellido*" (keypress)="_validacionService.letrasNumeros($event, 'l')"/>
+                <div *ngIf="usuarioForm.get('ape').errors && usuarioForm.get('ape').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('ape').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('ape').hasError('minlength')">
+            *Mínimo 3 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('ape').hasError('maxlength')">
+            *Máximo 30 caracteres
+          </span>
+                </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="amie" name="amie" placeholder="AMIE *" value="" />
+                 <input type="text" class="form-control" formControlName="amie" [(ngModel)]="amie"
+                       name="amie" id="amie" placeholder="AMIE *" (keypress)="_validacionService.letrasNumeros($event, 't')" />
+                <div *ngIf="usuarioForm.get('amie').errors && usuarioForm.get('amie').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('amie').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('amie').hasError('minlength')">
+            *Mínimo 8 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('amie').hasError('maxlength')">
+            *Máximo 8 caracteres
+          </span>
+              </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="nick" name="nick" placeholder="Nick Usuario *" value="" />
+                 <input type="text" style="text-transform: none" class="form-control" formControlName="nic"
+                       [(ngModel)]="nick" id="nickUsuario" name="nickUsuario" placeholder="Nick * "
+                       (keypress)="_validacionService.letrasNumeros($event, 't')"/>
+                <div *ngIf="usuarioForm.get('nic').errors && usuarioForm.get('nic').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('nic').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('nic').hasError('minlength')">
+            *Mínimo 3 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('nic').hasError('maxlength')">
+            *Máximo 30 caracteres
+          </span>
+                </div>
+
+
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="cedula" name="cedula" placeholder="Cedula *" value="" />
+                <input type="text" class="form-control" formControlName="ced" placeholder="Cédula *" [(ngModel)]="cedula" name="cedula"
+                       id="cedulaUsuario" (keypress)="_validacionService.letrasNumeros($event, 'n')"/>
+                <div *ngIf="usuarioForm.get('ced').errors && usuarioForm.get('ced').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('ced').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('ced').hasError('estado')">
+            *La cédula o RUC es incorrecta
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('ced').hasError('taman')">
+            *Debe contener 10 o 13 caracteres
+          </span>
+                </div>
+
               </div>
               <div class="form-group">
-                <input type="date" class="form-control" [(ngModel)]="fecha_nacimiento" name="fecha_nacimiento" placeholder="Fecha Nacimiento *" value="" />
+                <label>Fecha Nacimiento</label>
+                 <input type="date" class="form-control" formControlName="fecNac" [(ngModel)]="fecha_nacimiento"/>
+                <div *ngIf="usuarioForm.get('fecNac').errors && usuarioForm.get('fecNac').dirty" class="text-danger">
+              <span *ngIf="usuarioForm.get('fecNac').hasError('required')">
+                *Campo obligatorio
+              <br>
+              </span>
+                  <span *ngIf="usuarioForm.get('fecNac').hasError('menor')">
+                *El usuario es menor de edad
+              </span>
+                </div>
               </div>
 
               <div class="form-group">
                 <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="grado" name="grado" placeholder="Año de Educacion Basica *" value="" />
+                <input type="number" class="form-control" [(ngModel)]="grado" formControlName="grado" name="grado" (keypress)="_validacionService.letrasNumeros($event, 'n')"
+                       placeholder="Año de Educacion Basica *" value="" />
+                  <div *ngIf="usuarioForm.get('grado').errors && usuarioForm.get('grado').dirty" class="text-danger">
+              <span *ngIf="usuarioForm.get('grado').hasError('grado')">
+                *Campo obligatorio
+              </span>
+                    <span *ngIf="usuarioForm.get('grado').hasError('minlength')">
+            *Mínimo 3 caracteres
+          <br>
+          </span>
+                    <span *ngIf="usuarioForm.get('grado').hasError('maxlength')">
+            *Máximo 30 caracteres
+          </span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
               <div class="form-group">
-                <input type="email" class="form-control" [(ngModel)]="email" name="email" placeholder="Email *" value="" />
+                <input type="text" style="text-transform: none" class="form-control" formControlName="ema" placeholder="Correo Electrónico *"
+                       [(ngModel)]="email" name="email" id="emailUsuario"/>
+                <div *ngIf="usuarioForm.get('ema').errors && usuarioForm.get('ema').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('ema').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('ema').hasError('email')">
+            *Correo Incorrecto
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('ema').hasError('minlength')">
+            *Mínimo 10 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('ema').hasError('maxlength')">
+            *Máximo 50 caracteres
+          </span>
+                </div>
               </div>
               <div class="form-group">
-                <input type="text" minlength="10" maxlength="10" [(ngModel)]="telefono"  name="telefono" class="form-control" placeholder="Telefono *" value="" />
+                <input type="text" class="form-control" formControlName="numCon" [(ngModel)]="telefono" placeholder="Número de Contacto"
+                       name="contacto" id="contactoUsuario" (keypress)="_validacionService.letrasNumeros($event, 'n')"/>
+                <div *ngIf="usuarioForm.get('numCon').errors && usuarioForm.get('numCon').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('numCon').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('numCon').hasError('minlength')">
+            *Mínimo 9 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('numCon').hasError('maxlength')">
+            *Máximo 15 caracteres
+          </span>
+                </div> </div>
+              <div class="form-group">
+                <input type="text" class="form-control" formControlName="uniedu" [(ngModel)]="unidad_educativa"
+                       name="unidadeducativa" id="unidadeducativa" placeholder="Unidad Educativa *" (keypress)="_validacionService.letrasNumeros($event, 'l')"/>
+                <div *ngIf="usuarioForm.get('uniedu').errors && usuarioForm.get('uniedu').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('uniedu').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('uniedu').hasError('minlength')">
+            *Mínimo 3 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('uniedu').hasError('maxlength')">
+            *Máximo 30 caracteres
+          </span>
+                </div>
+
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" [(ngModel)]="unidad_educativa"  name="unidad_educativa" placeholder="Unidad Educativa *" value="" />
-              </div>
+                <input type="password" style="text-transform: none" class="form-control" formControlName="pas" placeholder="Contraseña"
+                       [(ngModel)]="password" name="password1" id="passwordUsuario"/>
+                <div *ngIf="usuarioForm.get('pas').errors && usuarioForm.get('pas').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('pas').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('pas').hasError('minlength')">
+            *Mínimo 9 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('pas').hasError('maxlength')">
+            *Máximo 256 caracteres
+          </span>
+                </div> </div>
               <div class="form-group">
-                <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Password *" value="" />
+                <input type="password" style="text-transform: none" class="form-control" formControlName="pas2" placeholder="Repita la contraeña"
+                       [(ngModel)]="password2" name="passwordConfirmarUsuario" id="passwordConfirmarUsuario"/>
+                <div *ngIf="usuarioForm.get('pas2').errors && usuarioForm.get('pas2').dirty" class="text-danger">
+          <span *ngIf="usuarioForm.get('pas2').hasError('required')">
+            *Campo obligatorio
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('pas2').hasError('minlength')">
+            *Mínimo 9 caracteres
+          <br>
+          </span>
+                  <span *ngIf="usuarioForm.get('pas2').hasError('maxlength')">
+            *Máximo 256 caracteres
+          </span>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="password" class="form-control"  placeholder="Confirm Password *" value="" />
-              </div>
-              <button class="btn btn-primary"  (click)="guardar()" >Registrar</button>
+              <button type="submit" class="btn btn-outline-primary" [disabled]="usuarioForm.invalid">
+                Registrar
+              </button>
             </div>
           </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
 </div>
+
+

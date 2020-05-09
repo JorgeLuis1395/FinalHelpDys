@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   profesor?
   estudiante?
 
+
   constructor(private _login: LoginService, private  global: VariablesGlobales, private _router: Router) {
     this.tipo_usuario = 'profesor';
   }
