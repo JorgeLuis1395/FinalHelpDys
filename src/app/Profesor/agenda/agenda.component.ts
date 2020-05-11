@@ -172,10 +172,10 @@ export class AgendaComponent  implements OnInit {
   addEvent(): void {
 
     var variableIngreso = {
-      idFeriado: 10000,
+      id: 10000,
       title: 'Nuevo',
       hourStart: '00:00',
-      hourFin: '23:59',
+      hourFin: '00:30',
       start: startOfDay(new Date()),
       end: endOfDay(new Date()),
       color: colors.orange,
@@ -205,6 +205,7 @@ export class AgendaComponent  implements OnInit {
     this._calendarioService.ingresarFeriado(newFeriado).subscribe(
       (valor) => {
         this.idNuevoFeriado = valor.identifiers[0].idFeriado;
+        console.log(valor,  newFeriado, valor.identifiers[0].idFeriado);
         console.log('feriado ingresado con exito');
       },
       (error) => {
@@ -228,7 +229,8 @@ export class AgendaComponent  implements OnInit {
   }
 
   updateEvent(evento) {
-    var eventoFiltrado = this.feriado.filter(filtrado => filtrado.idFeriado == evento.id);
+    console.log(evento)
+    var eventoFiltrado = this.feriado.filter(filtrado => filtrado.idFeriado === evento.id);
     var id = 0;
     if (this.idNuevoFeriado > 0) {
       id = this.idNuevoFeriado;
