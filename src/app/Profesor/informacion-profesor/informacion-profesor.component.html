@@ -4,7 +4,7 @@
   <div class="col-md-6 mx-auto mt-5">
     <div class="card">
       <div class="card-body">
-        <h3 class="text-center">Informacion</h3>
+        <h3 class="text-center">Información</h3>
         <form>
           <div class="form-group" align="center">
             <img src="{{this.global.apiUrl}}/public/users/{{usuario?.nombreFoto}}" height="80px" width="80px">
@@ -47,7 +47,7 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label>Fecha Nacimiento</label>
-                <input type="email" readonly="readonly" [value]="usuario.fecha_nacimiento" class="form-control">
+                <input type="email" readonly="readonly" [value]="usuario.fecha_nacimiento | date: 'yyyy-MM-dd' "  class="form-control" >
               </div>
             </div>
           </div>

@@ -26,7 +26,7 @@
         </div>
         <div class="col-xs-12 col-sm-6">
           <div class="form-group">
-            <label>Fecha de nacimiento</label><input readonly type="text"  placeholder="{{estudiantes?.fecha_nacimiento}}" class="form-control">
+            <label>Fecha de nacimiento</label><input readonly type="text"  [value]="estudiantes?.fecha_nacimiento | date:'yyyy-MM-dd' " class="form-control">
           </div>
         </div>
       </div>
