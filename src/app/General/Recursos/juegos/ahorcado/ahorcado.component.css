@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('src/assets/fondos/foto_fondo1_01.jpg');
   background-repeat: no-repeat;
-  height: 100%;
+  height: 90%;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Numans', sans-serif;
@@ -20,10 +20,14 @@ body {
 }
 
 .ahorcado-img {
-  height: 400px;
+  height: 280px;
 }
 
 button {
   margin-top: 5px;
   margin-left: 5px;
+}
+
+h3{
+  color: blue;
 }
