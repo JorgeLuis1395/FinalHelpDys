@@ -1,5 +1,16 @@
-img {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
+img.rounded-circle {
+  width: 45px;
+  height: 45px;
+}
+
+li{
+  color: black;
+}
+
+.menuPrincipal{
+  background-color: #778b66;
+}
+
+.colorLetras{
+  color: #f8f9fa;
 }
