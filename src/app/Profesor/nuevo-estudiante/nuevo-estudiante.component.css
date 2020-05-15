@@ -1,4 +1,24 @@
+body {
+  background: #1e73b8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #2330b8, #437dc2);
+  background: -moz-linear-gradient(right, #2a54b8, #1b36c2);
+  background: -o-linear-gradient(right, #2a54b8, #1b36c2);
+  background: linear-gradient(to left, #2a54b8, #1b36c2);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('src/assets/fondos/fondoProfe1.jpeg');
+  background-repeat: no-repeat;
+  height: 90%;
+  background-size: cover;
+  background-attachment: fixed;
 
+  font-family: 'Numans', sans-serif;
+}
+
+.opacity{
+  opacity:0.9; /* Opacidad 60% */
+}
 .register{
   background: -webkit-linear-gradient(left, #3931af, #00c6ff);
   margin-top: 0%;
@@ -18,17 +38,17 @@
   font-weight: bold;
   color: #383d41;
   margin-top: 30%;
-  margin-bottom: 3%;
+  margin-bottom: 30%;
   cursor: pointer;
 }
 .register-right{
   background: #f8f9fa;
-  border-top-left-radius: 0% 0%;
-  border-bottom-left-radius: 0% 0%;
+  border-top-left-radius: 20% 20%;
+  border-bottom-left-radius: 20% 20%;
 }
 .register-left img{
   margin-top: 15%;
-  margin-bottom: 5%;
+  margin-bottom: 25%;
   width: 25%;
   -webkit-animation: mover 2s infinite  alternate;
   animation: mover 1s infinite  alternate;
