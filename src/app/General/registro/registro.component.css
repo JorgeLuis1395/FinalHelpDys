@@ -7,13 +7,13 @@
 .register-left{
   text-align: center;
   color: #fff;
-  margin-top: 30%;
+  margin-top: 20%;
 }
 .register-left input{
   border: none;
   border-radius: 1.5rem;
   padding: 2%;
-  width: 60%;
+  width: 30%;
   background: #f8f9fa;
   font-weight: bold;
   color: #383d41;
@@ -73,7 +73,7 @@
 .register .nav-tabs .nav-link{
   padding: 2%;
   height: 34px;
-  font-weight: 600;
+  font-weight: 400;
   color: #fff;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
@@ -90,7 +90,7 @@
 }
 .register-heading{
   text-align: center;
-  margin-top: 8%;
+  margin-top: 1%;
   margin-bottom: -15%;
   color: #495057;
 }
