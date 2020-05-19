@@ -14,6 +14,8 @@ export class InformacionGeneral6Component implements OnInit {
   mostrarComponente5 = false;
   mostrarComponente6 = false;
 
+  panelOpenState = false;
+
   constructor() { }
 
   ngOnInit() {

@@ -91,6 +91,7 @@ import {ExcelService} from './services/excel.service';
 import {registerLocaleData} from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 import {FlatpickrModule} from 'angularx-flatpickr';
+import {MatExpansionModule} from "@angular/material/expansion";
 registerLocaleData(localeEs);
 
 @NgModule({
@@ -162,31 +163,31 @@ registerLocaleData(localeEs);
     CalificacionesEstudianteComponent,
 
   ],
-  imports: [
-    BrowserModule, FormsModule, ROUTING, HttpClientModule,
-    FormsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    BrowserAnimationsModule, MatButtonModule,
-    MatTableModule,
-    MatRadioModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    MatSlideToggleModule,
-    MatCheckboxModule,
-    MatPaginatorModule,
-    MatCardModule,
-    NgbModalModule,
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory
-    }),
-    FlatpickrModule.forRoot(),
+    imports: [
+        BrowserModule, FormsModule, ROUTING, HttpClientModule,
+        FormsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        BrowserAnimationsModule, MatButtonModule,
+        MatTableModule,
+        MatRadioModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        MatSlideToggleModule,
+        MatCheckboxModule,
+        MatPaginatorModule,
+        MatCardModule,
+        NgbModalModule,
+        CalendarModule.forRoot({
+            provide: DateAdapter,
+            useFactory: adapterFactory
+        }),
+        FlatpickrModule.forRoot(), MatExpansionModule,
 
-  ],
+    ],
   providers: [LoginService, ExcelService, VariablesGlobales, FlashMessagesService,
     { provide: LOCALE_ID, useValue: 'es'},
     UsuarioService, InformacionEstudianteService],
