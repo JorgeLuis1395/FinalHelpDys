@@ -1,3 +1,23 @@
+body {
+  background: #1e73b8; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #2330b8, #437dc2);
+  background: -moz-linear-gradient(right, #2a54b8, #1b36c2);
+  background: -o-linear-gradient(right, #2a54b8, #1b36c2);
+  background: linear-gradient(to left, #2a54b8, #1b36c2);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("src/assets/fondos/fondo_pruebas.jpg");
+  background-repeat: no-repeat;
+  height: 90%;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Numans', sans-serif;
+}
+
+.opacity{
+  opacity:0.8; /* Opacidad 60% */
+}
 .fondoColumna{
   background-image:url("/assets/fondos/fondo-selva.jpg");
 }
@@ -9,9 +29,7 @@ h1{
 h3{
   text-align: center;
 }
-.tamaño{
 
-}
 .borde{
   border-style: solid;
   border-width: 2.5px;
@@ -60,8 +78,8 @@ p{
   text-justify: distribute;
 }
 .countdown {
-  width: 100%;
-  height: 100px;
+  width: 90%;
+  height: 90px;
   background: black;
 }
 .measurements {
@@ -71,7 +89,7 @@ p{
 }
 
 .divider {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 h4 {

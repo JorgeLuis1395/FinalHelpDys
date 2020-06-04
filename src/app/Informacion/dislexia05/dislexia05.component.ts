@@ -15,6 +15,7 @@ export class Dislexia05Component implements OnInit {
   mostrarComponente6 = false;
 
   panelOpenState = false;
+
   constructor() { }
 
   ngOnInit() {

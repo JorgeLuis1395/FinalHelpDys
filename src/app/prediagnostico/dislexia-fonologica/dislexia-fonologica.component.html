@@ -1,18 +1,17 @@
-
-<div>
+<body>
+<div class="card-body">
   <audio src="/assets/audios/ubica.mp3" autoplay ></audio>
-<div class="row">
-  <div class="col-sm-12">
-    <div class="jumbotron mt-3" align="center">
-    <h1>Ubica correctamente las vocales para formar la palabra de la imagen</h1>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card mb-3 opacity" align="center" style="max-width: 1400px; height: 40px; margin-top: 0px">
+        <h2>Ubica correctamente las vocales para formar la palabra de la imagen</h2>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10 fondoColumna">
-
       <div *ngIf="estado">
         <div class="row">
           <div class="col-sm-3"></div>
@@ -26,7 +25,7 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-11" align="center"><img src="{{ruta}}" height="380" width="400"><audio src="{{ruta}}"></audio></div>
+        <div class="col-sm-11" align="center"><img src="{{ruta}}" height="300" width="400"><audio src="{{ruta}}"></audio></div>
         <div class="col-sm-1">
           <button id="buttonNext" class="btn btn-sm btn-link" type="submit" style="margin-top: 180px; margin-left: -35px" (click)="nextWord()">
             <img src="/assets/imagenes/btnSiguiente.png" alt="siguiente" style="width: 75px; height: 55px">
@@ -34,13 +33,10 @@
         </div>
       </div>
 
-
       <div class="row">
-
         <div class="col-sm-1"></div>
         <div class="col-sm-11">
           <div class="row">
-
             <div *ngIf="arregloPalabra.length >=7">
               <div class="row">
                 <div class="col-sm-1" *ngFor="let p of arregloPalabra ; let indice=index">
@@ -124,3 +120,4 @@
     </div>
   </div>
 </div>
+</body>
