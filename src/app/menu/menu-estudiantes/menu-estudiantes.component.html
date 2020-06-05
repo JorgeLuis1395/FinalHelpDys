@@ -1,21 +1,24 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
   <a class="navbar-brand" routerLink="/estudiante/wellcome">HelpDys</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkInformacion" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="far fa-question-circle"></i> Informacion
-        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkInformacion" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-question-circle"></i> Informacion </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" routerLink="/estudiante/informacion/1">¿Qué es la Dislexia?</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/estudiante/informacion/2">PRODISLEX</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/estudiante/informacion/3">Adaptaciones generales para alumnos</a><div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/estudiante/informacion/4">Adaptaciones generales para examenes</a><div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/estudiante/informacion/3">Adaptaciones generales para alumnos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/estudiante/informacion/4">Adaptaciones generales para examenes</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/estudiante/informacion/5">7 Pasos para detectar la Dislexia</a>
         </div>
       </li>
@@ -23,16 +26,17 @@
         <a class="nav-link letra" routerLink="/estudiante/pre_diagnostico"><i class="fas fa-vial"></i> Pre Diagnostico</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-archive"></i> Tratamiento
-        </a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-archive"></i> Tratamiento</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" routerLink="/tratamiento/cuentos"><i class="fas fa-book-open"></i> Cuentos</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" routerLink="/Tratamiento/Juegos"> <i class="fab fa-playstation"></i> Juegos</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/Tratamiento/Videos"><i class="fab fa-youtube"></i> Videos</a><div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="/Tratamiento/Imagenes"><i class="fas fa-images"></i> Imagenes</a><div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Tratamiento/Videos"><i class="fab fa-youtube"></i> Videos</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/Tratamiento/Imagenes"><i class="fas fa-images"></i> Imagenes</a>
         </div>
       </li>
       <li class="nav-item">
@@ -42,11 +46,10 @@
   </div>
   <ul class="navbar-nav">
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
+      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown"
+         aria-haspopup="true" aria-expanded="false">
         <img src="{{this.global.apiUrl}}/public/users/{{usuario?.nombreFoto}}" >
-        {{usuario.nombre}}{{usuario.apellido}}
-      </a>
+        {{usuario.nombre}}{{usuario.apellido}}</a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
         <a class="dropdown-item" routerLink="/estudiante/informacion"><i class="fas fa-child"></i> Informacion</a>
         <a class="dropdown-item" routerLink="/estudiante/actualizar"><i class="fas fa-users-cog"></i> Actualizar</a>
