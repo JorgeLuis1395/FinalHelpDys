@@ -17,3 +17,33 @@ body {
 .opacity{
   opacity:0.8; /* Opacidad 60% */
 }
+
+.borde{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #47d921;
+}
+
+
+.borde:hover{
+  border-color: #4f60ff;
+}
+
+.contenedor {
+  text-align: center;
+  cursor:pointer;
+}
+.contenedor:hover{
+  border-color: saddlebrown;
+
+
+}
+.contenedor1 {
+  text-align: center;
+  background-color: #a2c6e7;
+  cursor:pointer;
+}
+h3{
+  color: white;
+}
+
