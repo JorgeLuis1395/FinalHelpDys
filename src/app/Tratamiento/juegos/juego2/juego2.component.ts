@@ -24,14 +24,13 @@ export class Juego2Component implements OnInit {
   seleccionoButton() {
 
     var buttonSelect = document.getElementById('button'+this.indice);
-    console.log('selecciono el  ' + buttonSelect.textContent)
+
 
     if(buttonSelect.textContent != this.palabraCorrecta){
       DislexiaVisualComponent.puntajeJuego2 = DislexiaVisualComponent.puntajeJuego2 - 5;
     }
 
     this.dislexiaComponente.siguientePalabra();
-    console.log('puntajeJuego2 ' + DislexiaVisualComponent.puntajeJuego2)
-  }
+     }
 
 }

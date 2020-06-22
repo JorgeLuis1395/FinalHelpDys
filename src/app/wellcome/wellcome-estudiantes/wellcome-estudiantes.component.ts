@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UsuarioService} from "../../services/usuario.service";
+import {VariablesGlobales} from "../../services/variables-globales";
 
 @Component({
   selector: 'app-wellcome-estudiantes',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wellcome-estudiantes.component.css']
 })
 export class WellcomeEstudiantesComponent implements OnInit {
+  usuario: any
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+
   }
 
 }

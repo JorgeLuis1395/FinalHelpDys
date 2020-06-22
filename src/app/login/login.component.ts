@@ -3,6 +3,7 @@ import {LoginService} from "../services/login.service";
 import {Router} from "@angular/router";
 import {VariablesGlobales} from "../services/variables-globales";
 import Swal from 'sweetalert2';
+import {UsuarioService} from "../services/usuario.service";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
 
   contrasena = '';
-  usuario = '';
+  usuario: any;
   boton1 = true;
   user: any;
   tipo_usuario: string;
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
   estudiante?
 
 
-  constructor(private _login: LoginService, private  global: VariablesGlobales, private _router: Router) {
+  constructor(public _usuario: UsuarioService, private _login: LoginService, private  global: VariablesGlobales, private _router: Router) {
     this.tipo_usuario = 'profesor';
   }
 
@@ -56,15 +57,24 @@ export class LoginComponent implements OnInit {
     this._login.postLoginEstudiante(this.usuario, this.contrasena).then((result) => {
       this.global.nick = this.usuario;
       this.global.tokenUsuario = Object.values(result)[0];
-      const rutaHomeUsuario = [
-        '/estudiante/wellcome',
-      ];
-      this._router.navigate(rutaHomeUsuario);
+      this.getEstudiante()
     }, (err) => {
       this.registroIncorrecto()
     });
   }
 
+
+  getEstudiante() {
+    this._usuario.getEstudiante().then(data => {
+      this.usuario = data;
+      this.global.estudiante= this.usuario;
+      this.global.idEstudianteRegistrado = this.usuario.id;
+      const rutaHomeUsuario = [
+        '/estudiante/wellcome',
+      ];
+      this._router.navigate(rutaHomeUsuario);
+    });
+  }
   async seleccionPerfil() {
 
     const {value: perfil} = await Swal.fire({

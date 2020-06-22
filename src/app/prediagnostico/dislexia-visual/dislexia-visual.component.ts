@@ -96,8 +96,7 @@ export class DislexiaVisualComponent implements OnInit {
   savePuntaje() {
 
     this.usuario.postPuntaje(this.Puntaje.toString(), 'Dislexia Visual').then((result) => {
-      console.log(result)
-      console.log(Object.values(result)[1][0]);
+
       this.aux = Object.values(result)[1][0];
       this.global.idpuntaje = parseInt(Object.values(this.aux)[0].toString());
       this.idPuntaje = parseInt(Object.values(this.aux)[0].toString());
@@ -121,18 +120,12 @@ export class DislexiaVisualComponent implements OnInit {
   }
 
   getEstudiante() {
-    this.usuario.getEstudiante().then(data => {
-      this.estudiante = data;
-      console.log(this.usuario);
-      this.global.idEstudianteRegistrado = Object.values(data)[0];
-    });
+      this.global.idEstudianteRegistrado = this.global.estudiante.id;
   }
 
   getFonologico() {
     this.usuario.getPuntajeFonoloficaId().then(data => {
       this.fonologico = data;
-      console.log(      Object.values(this.fonologico)[1]
-      );
     });
   }
 

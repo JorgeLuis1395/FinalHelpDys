@@ -75,7 +75,7 @@ export class NuevoEstudianteComponent implements OnInit {
     this._estudiante.uploadFile(this.imagenEstudiante).subscribe(value => {
       this.path = value.imagePath;
       alert("Imagen Guardada con Exito");
-      console.log(value.imagePath)
+
     })
 
 
@@ -115,8 +115,6 @@ export class NuevoEstudianteComponent implements OnInit {
       this.nombreFoto,
       this.rol).then((result) => {
       result
-      console.log(result)
-      console.log(Object.values(result)[1][0]);
       this.aux = Object.values(result)[1][0];
       this.idEstudiante = parseInt(Object.values(this.aux)[0].toString());
       this.profesorEstudiante();
@@ -127,13 +125,10 @@ export class NuevoEstudianteComponent implements OnInit {
   }
 
   profesorEstudiante() {
-    console.log(this.global.idProfesor)
-    console.log(this.idEstudiante)
     this._estudiante.saveProfesorEstudiante(this.global.idProfesor,
       this.idEstudiante,
     ).then((result) => {
       result
-      console.log(result)
       alert("Estudiante Registrado Satisfactoriamente");
     }, (err) => {
       alert("No se pudo registrar el Estudiante");
@@ -144,7 +139,6 @@ export class NuevoEstudianteComponent implements OnInit {
     var caracteres = "abcdefghijkmnpqrtuvwxyzABCDEFGHJKMNPQRTUVWXYZ12346789";
     var contraseña = "";
     for (var i = 0; i < 10; i++) contraseña += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-    console.log(contraseña)
     this.codigo_estudiante = contraseña;
   }
 

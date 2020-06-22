@@ -58,12 +58,10 @@ export class AhorcadoComponent {
     {
       if ( palabraEvaluar === this.palabra ) {
         this.gano = true;
-        console.log('Usuario GANO');
       }
 
       if ( this.intentos >= 9 ) {
         this.perdio = true;
-        console.log('Usuario perdio');
       }
     }
   }
@@ -72,9 +70,7 @@ export class AhorcadoComponent {
   existeLetra( letra ) {
 
     if ( this.palabra.indexOf( letra ) >= 0  ) {
-      // console.log('Letra existe ' + letra );
     } else {
-      // console.log('Letra NO existe ' + letra );
       this.intentos ++;
     }
 

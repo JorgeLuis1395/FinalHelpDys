@@ -18,8 +18,6 @@ export class MenuProfesoresComponent implements OnInit {
   getUser(){
     this._usuario.getUsuario().then(data => {
       this.usuario = data;
-      console.log(this.usuario);
-
     });
   }
 

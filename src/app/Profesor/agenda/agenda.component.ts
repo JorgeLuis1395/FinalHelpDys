@@ -110,7 +110,6 @@ export class AgendaComponent  implements OnInit {
     this._calendarioService.mostrarFeriados(subDays(fechaActual, 2).toISOString().split('T')[0])
       .subscribe((data: Agenda[]) => {
         this.feriado = data;
-        console.log(this.feriado)
         for (let fer of this.feriado) {
           var variableIngreso = {
             id: fer.idFeriado,
@@ -205,11 +204,9 @@ export class AgendaComponent  implements OnInit {
     this._calendarioService.ingresarFeriado(newFeriado).subscribe(
       (valor) => {
         this.idNuevoFeriado = valor.identifiers[0].idFeriado;
-        console.log(valor,  newFeriado, valor.identifiers[0].idFeriado);
-        console.log('feriado ingresado con exito');
       },
       (error) => {
-        console.log('error al ingresar feriado', error);
+
       });
   }
 
@@ -218,18 +215,16 @@ export class AgendaComponent  implements OnInit {
     this._calendarioService.deleteFeriado(eventToDelete.id)
       .subscribe(
         (valor) => {
-          console.log(valor, 'eliminado con exito');
           this.events = [...this.events];
           this.dataSource = new MatTableDataSource(this.events);
           this.dataSource.paginator = this.paginacion;
         },
         (error) => {
-          console.log(error, 'ocurrio un error al eliminar un feriado');
-        });
+          });
   }
 
   updateEvent(evento) {
-    console.log(evento)
+
     var eventoFiltrado = this.feriado.filter(filtrado => filtrado.idFeriado === evento.id);
     var id = 0;
     if (this.idNuevoFeriado > 0) {
@@ -254,10 +249,10 @@ export class AgendaComponent  implements OnInit {
     this._calendarioService.updateFeriado(holidayUpdate, id)
       .subscribe(
         (valor) => {
-          console.log('actualizado con exito');
+
         },
         (error) => {
-          console.log('se produjo un error', error);
+
         }
       );
   }

@@ -43,7 +43,6 @@ export class EditarInfoEstudianteComponent implements OnInit {
   getUser(){
     this._estudiante.getEstudianteConsulta().then(data => {
       this.usuario = data;
-      console.log(this.usuario);
       this.imgURL= Object.values(data)[12]
       this.nombre = Object.values(data)[1];
       this.apellido = Object.values(data)[2];
@@ -72,7 +71,7 @@ export class EditarInfoEstudianteComponent implements OnInit {
   onSubmit() {
 
       this._estudiante.uploadFile(this.imagenEstudiante).subscribe(value =>{ this.path = value.imagePath;
-        console.log(value.imagePath)})
+      })
 
 
   }

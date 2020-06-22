@@ -15,7 +15,7 @@ export class LoginService {
       nick,
       password,
     };
-    console.log(param);
+
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl + '/autenticacion', param)
         .subscribe(res => {
@@ -31,7 +31,7 @@ export class LoginService {
       nick,
       password,
     };
-    console.log(param);
+
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl + '/autenticacionestudiante', param)
         .subscribe(res => {

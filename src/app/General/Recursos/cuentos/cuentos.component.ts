@@ -23,7 +23,6 @@ export class CuentosGeneralComponent implements OnInit {
   }
 
   irCuento(id){
-    console.log(id)
     this.global.idCuento =  id;
   }
 }

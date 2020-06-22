@@ -10,4 +10,5 @@ export class VariablesGlobales {
   idCuento: number;
   apiUrl = environment.apiUrl;
   idpuntaje: number;
+  estudiante: any;
 }

@@ -9,17 +9,11 @@ import {VariablesGlobales} from "../../services/variables-globales";
 })
 export class MenuEstudiantesComponent implements OnInit {
   usuario: any
-  constructor(public _usuario: UsuarioService, public global: VariablesGlobales) { }
+  constructor(public global: VariablesGlobales) { }
 
   ngOnInit() {
-    this.getEstudiante()
+this.usuario= this.global.estudiante
   }
 
-  getEstudiante(){
-    this._usuario.getEstudiante().then(data => {
-      this.usuario = data;
-      console.log(this.usuario);
-      this.global.idEstudianteRegistrado = Object.values(data)[0];
-    });
-  }
+
 }

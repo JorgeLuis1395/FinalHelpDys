@@ -20,7 +20,7 @@ export class InformacionProfesorComponent implements OnInit {
   getUser(){
     this.profesor.getUsuario().then(data => {
       this.usuario = data;
-      console.log(this.usuario);
+
     });
   }
 }

@@ -19,11 +19,11 @@ export class CuentosComponent implements OnInit {
   getCuentos(){
     this.cuentos.getCuentos().then(data => {
       this.aux = data;
-    });
+      });
   }
 
   irCuento(id){
-    console.log(id)
+
     this.global.idCuento =  id;
   }
 }

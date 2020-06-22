@@ -45,7 +45,7 @@ export class ActualizarInformacionComponent implements OnInit {
   getUser() {
     this._estudiante.getUsuario().then(data => {
       this.usuario = data;
-      console.log(this.usuario);
+
       this.imgURL = this.global.apiUrl+"/public/users/"+ Object.values(data)[12]
 
      this.nombre = Object.values(data)[1];
@@ -75,7 +75,6 @@ export class ActualizarInformacionComponent implements OnInit {
 
     this._estudiante.uploadFile(this.imagenEstudiante).subscribe(value => {
       this.path = value.imagePath;
-      console.log(value.imagePath)
     })
 
 

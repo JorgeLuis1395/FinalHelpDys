@@ -46,10 +46,8 @@ export class CalificacionesAgregarComponent implements OnInit {
   }
 
   saveCalificacion(){
-    console.log(this.seleccion + this.campos)
+
     this.usuario.postCalificaciones(this.seleccion,this.campos,this.materia,this.calificacion).then((result) => {
-      console.log(result)
-      console.log(Object.values(result)[1][0]);
       this.aux = Object.values(result)[1][0];
       this.idCalificacion = parseInt(Object.values(this.aux)[0].toString());
       this.estudianteCalificacion();
@@ -66,12 +64,12 @@ export class CalificacionesAgregarComponent implements OnInit {
   }
 
   estudianteCalificacion() {
-    console.log(this.global.idEstudiante)
+
     this.usuario.saveCalificacionEstudiante(this.global.idEstudiante,
       this.idCalificacion,
     ).then((result) => {
       result
-      console.log(result)
+
       alert("Calificacion Registrada Satisfactoriamente");
     }, (err) => {
       alert("No se pudo registrar el Estudiante");

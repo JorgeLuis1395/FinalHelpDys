@@ -72,7 +72,7 @@ export class DislexiaFonologicaComponent implements OnInit {
 
       if (this.palabra[i] === valor){
         this.imprimir = 'tu puntaje es: ' + this.Puntaje;
-        console.log('tu puntaje es: ' + this.Puntaje)
+
       }
       else {
         this.Puntaje = this.Puntaje - 5;
@@ -123,23 +123,22 @@ export class DislexiaFonologicaComponent implements OnInit {
   {
 
     this.usuario.postPuntaje(this.Puntaje.toString(),'Dislexia Fonológica').then((result) => {
-      console.log(result)
-      console.log(Object.values(result)[1][0]);
+
       this.aux = Object.values(result)[1][0];
       this.idPuntaje = parseInt(Object.values(this.aux)[0].toString());
       this.estudiantePuntaje();
     }, (err) => {
-      console.log(err);
+
     });
   }
 
   estudiantePuntaje() {
-    console.log(this.global.idEstudianteRegistrado)
+
     this.usuario.savePuntajeEstudiante(this.global.idEstudianteRegistrado,
       this.idPuntaje,
     ).then((result) => {
       result
-      console.log(result)
+
     }, (err) => {
     });
   }

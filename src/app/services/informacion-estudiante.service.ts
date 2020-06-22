@@ -11,14 +11,13 @@ export class InformacionEstudianteService {
   }
 
   getEstudianteConsulta() {
-    console.log(this.global.nick)
+
     return new Promise(resolve => {
       this.http.get(this.apiUrl + '/estudiante/' + this.global.nick,
         {headers: new HttpHeaders({'Authorization': 'Bearer ' + this.global.tokenUsuario})}).subscribe(data => {
         resolve(data);
-        console.log(data);
+
       }, err => {
-        console.log(err);
       });
     });
   }
@@ -28,7 +27,6 @@ export class InformacionEstudianteService {
     const urlServicios = this.apiUrl + '/estudiante/upload-image';
     let formData: FormData = new FormData();
     formData.append('image', file);
-    console.log(formData)
     return this.http.post<any>(urlServicios, formData, {headers: new HttpHeaders({'Authorization': 'Bearer ' + this.global.tokenUsuario})})
   }
 
@@ -49,7 +47,7 @@ export class InformacionEstudianteService {
       nombreFoto,
       rol
     };
-    console.log(param);
+
     return new Promise((resolve, reject) => {
       this.http.put(this.apiUrl + '/estudiante/'+ this.global.nick, param, {headers: new HttpHeaders({'Authorization': 'Bearer ' + this.global.tokenUsuario})})
         .subscribe(res => {
@@ -77,7 +75,7 @@ export class InformacionEstudianteService {
       nombreFoto,
       rol
     };
-    console.log(param);
+
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl + '/estudiante', param, {headers: new HttpHeaders({'Authorization': 'Bearer ' + this.global.tokenUsuario})})
         .subscribe(res => {
@@ -95,7 +93,7 @@ export class InformacionEstudianteService {
       estudianteId,
 
     };
-    console.log(param);
+
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl + '/profesorEstudiante', param, {headers: new HttpHeaders({'Authorization': 'Bearer ' + this.global.tokenUsuario})})
         .subscribe(res => {

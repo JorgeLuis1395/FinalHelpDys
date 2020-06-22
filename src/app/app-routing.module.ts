@@ -229,9 +229,8 @@ export const RUTAS_APP: Routes = [
   },
 
   {
-    path: 'tratamiento/contenido',
+    path: 'tratamiento/cuentos/contenido',
     component: ContenidoComponent,
-
   },
 
 

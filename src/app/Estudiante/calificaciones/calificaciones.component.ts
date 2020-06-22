@@ -11,18 +11,11 @@ export class CalificacionesEstudianteComponent implements OnInit {
   usuario: any;
   aux: any;
 
-  constructor(public _usuario: UsuarioService, public global: VariablesGlobales) {
+  constructor(public global: VariablesGlobales) {
   }
 
   ngOnInit() {
-    this.getEstudiante()
+    this.aux = this.global.estudiante.calificacion;
   }
 
-  getEstudiante() {
-    this._usuario.getEstudiante().then(data => {
-      this.usuario = data;
-      console.log(this.usuario);
-      this.aux = Object.values(data)[15];
-    });
-  }
 }

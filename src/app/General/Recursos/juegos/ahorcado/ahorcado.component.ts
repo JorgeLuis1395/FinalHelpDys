@@ -59,13 +59,11 @@ export class AhorcadoGeneralComponent implements OnInit {
     {
     if ( palabraEvaluar === this.palabra ) {
       this.gano = true;
-      //console.log('Usuario GANO');
       this.ganaste()
     }
 
     if ( this.intentos >= 9 ) {
       this.perdio = true;
-     // console.log('Usuario perdio');
       this.perdiste()
     }
     }
@@ -75,9 +73,8 @@ export class AhorcadoGeneralComponent implements OnInit {
   existeLetra( letra ) {
 
     if ( this.palabra.indexOf( letra ) >= 0  ) {
-      // console.log('Letra existe ' + letra );
-    } else {
-      // console.log('Letra NO existe ' + letra );
+      } else {
+
       this.intentos ++;
     }
 

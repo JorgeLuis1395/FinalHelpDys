@@ -24,16 +24,16 @@ export class CalificacionesComponent implements OnInit {
     observableUsuarios
       .subscribe(
         results => {
-          console.log(results);
+
           this.estudiantes = Object.values(results)[14];
           this.llenarUsuarios();
-          console.log(this.arrayEstudiantes)
+
         },
         (error) => {
           console.log('Error', error);
         },
         () => {
-          console.log('COMPLETO!');
+
         }
       );
   }
@@ -47,7 +47,7 @@ export class CalificacionesComponent implements OnInit {
 
   irDetalle(idEstudiante) {
     this.globales.idEstudiante = idEstudiante
-    console.log(idEstudiante);
+
   }
 
 }

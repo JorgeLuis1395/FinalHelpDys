@@ -1,6 +1,7 @@
-img.rounded-circle {
-  width: 45px;
-  height: 45px;
+.imgRedonda {
+  width: 30px;
+  height: 30px;
+  border-radius:150px;
 }
 
 li{

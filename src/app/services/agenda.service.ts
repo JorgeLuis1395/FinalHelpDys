@@ -24,7 +24,7 @@ export class AgendaService {
   }
 
   updateFeriado(feriadoActualizado: Agenda, id): Observable<Agenda[]> {
-    console.log(feriadoActualizado);
+
     let url = this.global.apiUrl+'/agenda';
     return this.http.put<any>(url+"/"+id, feriadoActualizado)
   }

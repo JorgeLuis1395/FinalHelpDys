@@ -183,9 +183,9 @@ export class SearchPipe implements PipeTransform {
     if (!searchText) {
       return items;
     }
-    console.log(searchText)
+
     searchText = this.removeDiacritics(searchText.toLowerCase());
-    console.log(items)
+
     return items.filter(it => {
       return this.removeDiacritics(it.toLowerCase()).includes(searchText);
     });
