@@ -1,30 +1,29 @@
 <app-menu-profesores></app-menu-profesores>
 <body>
+<br>
 <div class="card-body">
   <div class="row">
     <div class="col-sm-12">
-      <div class="card mb-3 opacity" align="center" style="margin-left: 5%">
+      <div class="card mb-3 opacity" align="center" style="max-width: 1400px; height: 40px; margin-top: 0px">
         <h2>PRODISLEX (Protocolos de detección y actuación en Dislexia)</h2>
       </div>
     </div>
   </div>
-
+  <br>
   <div class="row">
     <div class="col-sm-12">
-      <div class="card mb-3"  style="margin-top: 1%; margin-left: 5%">
+      <div class="card mb-3 opacity" align="center" style="max-width: 1400px; height: 400px; margin-top: 0px">
         <div class="row no-gutters">
           <div class="col-md-12">
             <div class="card-body">
               <h6>
                 <p align="justify">
-                  Estos protocolos han sido elaborados por un equipo de profesionales
-                  con la colaboración de DISFAM (Dislexia y familia) y de la UIB
-                  (Universidad de las Islas Baleares), así como con la supervisión
-                  de profesores y profesionales de la Dirección General de Innovación
-                  y Formación del Profesorado. Esta herramienta de trabajo tiene como
-                  objetivo la detección precoz, y proporcionar estrategias para
-                  conseguir el éxito de este tipo de alumnos, así como acceder al
-                  aprendizaje en igualdad de condiciones.</p></h6>
+                  Estos protocolos han sido elaborados por un equipo de profesionales con la colaboración de DISFAM
+                  (Dislexia y familia) y de la UIB (Universidad de las Islas Baleares), así como con la supervisión
+                  de profesores y profesionales de la Dirección General de Innovación y Formación del Profesorado.
+                  Esta herramienta de trabajo tiene como objetivo la detección precoz, y proporcionar estrategias para
+                  conseguir el éxito de este tipo de alumnos, así como acceder al aprendizaje en igualdad de condiciones.
+                </p></h6>
             </div>
           </div>
         </div>
@@ -40,7 +39,7 @@
               <div *ngIf="mostrarComponente6" align="center">
                 <br>
                 <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Infantil.pdf"
-                       type="application/pdf" width="80%" height="400px"/>
+                       type="application/pdf" width="100%" height="600px"/>
               </div>
             </div>
           </div>
@@ -49,10 +48,10 @@
               Protocolos de Primaria 1er ciclo
             </h6>
             <div class="col-sm-12" align="center">
-              <div *ngIf="mostrarComponente" align="center">
+              <div *ngIf="mostrarComponente" >
                 <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Primaria-
-                1ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
+                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Primaria-1ciclo.pdf"
+                       type="application/pdf" width="100%" height="600px"/>
               </div>
             </div>
           </div>
@@ -63,8 +62,8 @@
             <div class="col-sm-12" align="center">
               <div *ngIf="mostrarComponente1">
                 <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Primaria-
-                2ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
+                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Primaria-2ciclo.pdf"
+                       type="application/pdf" width="100%" height="600px"/>
               </div>
             </div>
           </div>
@@ -75,8 +74,8 @@
             <div class="col-sm-12" align="center">
               <div *ngIf="mostrarComponente3" align="center">
                 <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Secundaria-
-                1ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
+                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Secundaria-1ciclo.pdf"
+                       type="application/pdf" width="100%" height="600px"/>
               </div>
             </div>
           </div>
@@ -87,8 +86,8 @@
             <div class="col-sm-12" align="center">
               <div *ngIf="mostrarComponente4">
                 <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Secundaria-
-                2ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
+                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Secundaria-2ciclo.pdf"
+                       type="application/pdf" width="100%" height="600px"/>
               </div>
             </div>
           </div>
@@ -100,101 +99,13 @@
           <div class="col-sm-12" align="center">
             <div *ngIf="mostrarComponente5">
               <br>
-              <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-
-              Bachillerato.pdf" type="application/pdf" width="100%" height="600px"/>
+              <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Bachillerato.pdf"
+                     type="application/pdf" width="100%" height="600px"/>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--<div class="row">
-    <div class="col-sm-12" align="center">
-      <h5>Selecciona el tipo de Protocolo a Observar</h5>
-    </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8">
-      <div class="jumbotron mt-3" align="justify">
-       <div class="row contenedor ">
-          <div class="col-sm-12 borde">
-            <div class="col-sm-12" align="center">
-              <h5><b>Selecciona el tipo de Protocolo a Observar</b></h5>
-            </div>
-            <h6 (click)="mostrarComponente6 = !mostrarComponente6">
-              Protocolos de Educacion Inicial
-            </h6>
-            <div class="col-sm-12" align="center">
-              <div *ngIf="mostrarComponente6" align="center">
-                <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Infantil.pdf" type="application/pdf" width="100%" height="600px"/>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 borde">
-            <h6 (click)="mostrarComponente = !mostrarComponente">
-              Protocolos de Primaria 1er ciclo
-            </h6>
-            <div class="col-sm-12" align="center">
-              <div *ngIf="mostrarComponente" align="center">
-                <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Primaria-1ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 borde">
-            <h6 (click)="mostrarComponente1 = !mostrarComponente1">
-              Protocolos de Primaria 2do ciclo
-            </h6>
-            <div class="col-sm-12" align="center">
-              <div *ngIf="mostrarComponente1">
-                <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Primaria-2ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-12 borde">
-            <h6 (click)="mostrarComponente3= !mostrarComponente3">
-              Protocolos de Secundaria 1er ciclo
-            </h6>
-            <div class="col-sm-12" align="center">
-              <div *ngIf="mostrarComponente3" align="center">
-                <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Secundaria-1ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 borde">
-            <h6 (click)="mostrarComponente4 = !mostrarComponente4">
-              Protocolos de Secundaria 2do ciclo
-            </h6>
-            <div class="col-sm-12" align="center">
-              <div *ngIf="mostrarComponente4">
-                <br>
-                <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Secundaria-2ciclo.pdf" type="application/pdf" width="100%" height="600px"/>
-
-              </div>
-            </div>
-
-          </div>
-          <div class="col-sm-12 borde">
-            <h6 (click)="mostrarComponente5 = !mostrarComponente5">
-              Protocolos de Bachillerato
-            </h6>
-          </div>
-          <div class="col-sm-12" align="center">
-            <div *ngIf="mostrarComponente5">
-              <br>
-              <embed src="/assets/documentos/Protocolos%20de%20detección%20y%20actuación%20en%20Dislexia-Bachillerato.pdf" type="application/pdf" width="100%" height="600px"/>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
 </div>
 </body>
