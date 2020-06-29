@@ -16,16 +16,9 @@ body {
 }
 
 .opacity{
-  opacity:0.8; /* Opacidad 60% */
+  opacity:0.9; /* Opacidad 90% */
 }
 
-h1{
-  color:  blue;
-  text-align: center;
-  text-decoration: aqua;
-}
-
-h3{
-  color: darkblue;
-  text-align: center;
+h6{
+  font-size: 18px;
 }

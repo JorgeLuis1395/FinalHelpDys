@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('src/assets/fondos/fondoProfe1.jpeg');
   background-repeat: no-repeat;
-  height: 140%;
+  height: 120%;
   background-size: cover;
   background-attachment: fixed;
 
@@ -17,16 +17,13 @@ body {
 }
 
 .opacity{
-  opacity:0.8; /* Opacidad 60% */
+  opacity:0.9; /* Opacidad 90% */
 }
 
-h1{
-  color:  blue;
-  text-align: center;
-  text-decoration: aqua;
+h6{
+  font-size: 18px;
+}
+h7{
+  font-size: 15px;
 }
 
-h3{
-  color: darkblue;
-  text-align: left;
-}
