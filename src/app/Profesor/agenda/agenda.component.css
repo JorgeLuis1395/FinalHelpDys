@@ -21,7 +21,11 @@ body {
 }
 
 h3{
-  color:white;
+  color: white;
+}
+
+h1{
+  color:black;
 }
 
 tr{

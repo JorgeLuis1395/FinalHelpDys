@@ -2,155 +2,6 @@
 <body>
 <div class="pageContent extended">
   <div class="container card-header" >
-
-  <!--  <div class="row">
-
-      <div class="col-xs-12 col-sm-4 i">
-        <div class="box">
-          <label>Fecha de Inicio de la Cita</label><input type="date" [(ngModel)]="fechaInicio" name="fechaInicio"
-                                                          class="form-control">
-          <label>Fecha de Fin de la Cita</label><input type="date" [(ngModel)]="fechaFin" name="fechaFin"
-                                                       class="form-control" >
-          <label>Hora de Inicio</label><input type="time" [(ngModel)]="horaInicio" name="horaInicio"
-                                              class="form-control" >
-          <label>Hora de Fin</label><input type="time" [(ngModel)]="horaFin" name="horaFin" class="form-control"
-                                           >
-
-          <div class="form-group">
-            <mat-select matNativeControl required placeholder="Categoria" id="parametros">
-              <mat-option value="valor1" (click)="categoria='Comida'">Comida
-              </mat-option>
-              <mat-option value="valor2" (click)="categoria='Reuniones'">
-                Reuniones
-              </mat-option>
-              <mat-option value="valor3" (click)="categoria='Revision Tareas '">
-                Revision Tareas
-              </mat-option>
-              <mat-option value="valor4" (click)="categoria='Viajes'">
-                Viajes
-              </mat-option>
-              <mat-option value="valor1" (click)="categoria='Tutorias'">Tutorias
-              </mat-option>
-
-            </mat-select>
-          </div>
-          <div class="form-group">
-            <label>Nombre</label> <input type="text" class="form-control input-group" [(ngModel)]="nombre"
-                                         name="nombre">
-          </div>
-          <div class="form-group">
-            <label>Ubicacion</label>
-            <div class="input-group"><input type="text" class="form-control input-group" [(ngModel)]="ubicacion"
-                                            name="ubicacion">
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Detalle</label>
-            <div class="input-group"><input type="text" class="form-control input-group" [(ngModel)]="detalle"
-                                            name="detalle">
-            </div>
-          </div>
-          <button class="btn btn-warning" (click)="saveAgenda()"> Guardar</button>
-        </div>
-      </div>
-    <div class="col-xs-12 col-sm-8 i">
-      <div class="box">
-        <div class="row text-center">
-          <div class="col-md-4">
-            <div class="btn-group">
-              <div
-                class="btn btn-primary"
-                mwlCalendarPreviousView
-                [view]="view"
-                [(viewDate)]="viewDate"
-                (viewDateChange)="closeOpenMonthViewDay()"
-              >
-                Previous
-              </div>
-              <div
-                class="btn btn-outline-secondary"
-                mwlCalendarToday
-                [(viewDate)]="viewDate"
-              >
-                Today
-              </div>
-              <div
-                class="btn btn-primary"
-                mwlCalendarNextView
-                [view]="view"
-                [(viewDate)]="viewDate"
-                (viewDateChange)="closeOpenMonthViewDay()"
-              >
-                Next
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
-          </div>
-          <div class="col-md-4">
-            <div class="btn-group">
-              <div
-                class="btn btn-primary"
-                (click)="setView(CalendarView.Month)"
-                [class.active]="view === CalendarView.Month"
-              >
-                Month
-              </div>
-              <div
-                class="btn btn-primary"
-                (click)="setView(CalendarView.Week)"
-                [class.active]="view === CalendarView.Week"
-              >
-                Week
-              </div>
-              <div
-                class="btn btn-primary"
-                (click)="setView(CalendarView.Day)"
-                [class.active]="view === CalendarView.Day"
-              >
-                Day
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div [ngSwitch]="view">
-          <mwl-calendar-month-view
-            *ngSwitchCase="CalendarView.Month"
-            [viewDate]="viewDate"
-            [events]="events"
-            [refresh]="refresh"
-            [activeDayIsOpen]="activeDayIsOpen"
-            (dayClicked)="dayClicked($event.day)"
-            (eventClicked)="handleEvent('Clicked', $event.event)"
-            (eventTimesChanged)="eventTimesChanged($event)"
-          >
-          </mwl-calendar-month-view>
-          <mwl-calendar-week-view
-            *ngSwitchCase="CalendarView.Week"
-            [viewDate]="viewDate"
-            [events]="events"
-            [refresh]="refresh"
-            (eventClicked)="handleEvent('Clicked', $event.event)"
-            (eventTimesChanged)="eventTimesChanged($event)"
-          >
-          </mwl-calendar-week-view>
-          <mwl-calendar-day-view
-            *ngSwitchCase="CalendarView.Day"
-            [viewDate]="viewDate"
-            [events]="events"
-            [refresh]="refresh"
-            (eventClicked)="handleEvent('Clicked', $event.event)"
-            (eventTimesChanged)="eventTimesChanged($event)"
-          >
-          </mwl-calendar-day-view>
-        </div>
-
-      </div>
-    </div>
-  </div>-->
-
     <div class="row text-center">
       <div class="col-md-4">
         <div class="btn-group">
@@ -164,24 +15,20 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'es' }}</h3>
+      <div class="col-sm-4">
+        <h1><b>{{ viewDate | calendarDate:(view + 'ViewTitle'):'es' }}</b></h1>
       </div>
       <div class="col-md-4">
         <div class="btn-group">
-          <div class="btn btn-primary" (click)="setView(CalendarView.Month)"
-               [class.active]="view === CalendarView.Month">Mes
+          <div class="btn btn-primary" (click)="setView(CalendarView.Month)"[class.active]="view === CalendarView.Month">Mes
           </div>
-          <div class="btn btn-primary" (click)="setView(CalendarView.Week)"
-               [class.active]="view === CalendarView.Week">Semana
+          <div class="btn btn-primary" (click)="setView(CalendarView.Week)"[class.active]="view === CalendarView.Week">Semana
           </div>
-          <div class="btn btn-primary" (click)="setView(CalendarView.Day)"
-               [class.active]="view === CalendarView.Day">Día
+          <div class="btn btn-primary" (click)="setView(CalendarView.Day)"[class.active]="view === CalendarView.Day">Día
           </div>
         </div>
       </div>
     </div>
-    <br />
 
     <div [ngSwitch]="view">
       <mwl-calendar-month-view
@@ -192,8 +39,7 @@
         [activeDayIsOpen]="activeDayIsOpen"
         (dayClicked)="dayClicked($event.day)"
         (eventClicked)="handleEvent('Clicked', $event.event)"
-        (eventTimesChanged)="eventTimesChanged($event)"
-      >
+        (eventTimesChanged)="eventTimesChanged($event)">
       </mwl-calendar-month-view>
       <mwl-calendar-week-view
         *ngSwitchCase="CalendarView.Week"
@@ -201,8 +47,7 @@
         [events]="events"
         [refresh]="refresh"
         (eventClicked)="handleEvent('Clicked', $event.event)"
-        (eventTimesChanged)="eventTimesChanged($event)"
-      >
+        (eventTimesChanged)="eventTimesChanged($event)">
       </mwl-calendar-week-view>
       <mwl-calendar-day-view
         *ngSwitchCase="CalendarView.Day"
@@ -210,104 +55,60 @@
         [events]="events"
         [refresh]="refresh"
         (eventClicked)="handleEvent('Clicked', $event.event)"
-        (eventTimesChanged)="eventTimesChanged($event)"
-      >
+        (eventTimesChanged)="eventTimesChanged($event)">
       </mwl-calendar-day-view>
     </div>
-
-
-    <!-- Everything you see below is just for the demo, you don't need to include it in your app -->
-
-    <br />
-
-    <div class="col-md-">
-    <h3>
-      Nuevos Eventos
-      <button class="btn btn-primary pull-right" (click)="addEvent()">
-        Añadir
-      </button>
+    <br>
+    <div class="col-md-12">
+    <h3>Nuevos Eventos
+      <button class="btn btn-primary pull-right" (click)="addEvent()">Añadir</button>
       <div class="clearfix"></div>
     </h3>
     </div>
-<div class="card-body">
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead>
-        <tr>
-          <th>Estudiante</th>
-          <th>Prioridad</th>
-          <th>Tipo de evento</th>
-          <th>Hora Inicio</th>
-          <th>Hora de Fin</th>
-          <th>Eliminar</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        <tr *ngFor="let event of events">
-          <td>
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="event.title"
-              (keyup)="refresh.next()"
-            />
-          </td>
-          <td>
-            <input
-              type="color"
-              [(ngModel)]="event.color.primary"
-              (change)="refresh.next()"
-            />
-          </td>
-          <td>
-            <input
-              type="color"
-              [(ngModel)]="event.color.secondary"
-              (change)="refresh.next()"
-            />
-          </td>
-          <td>
-            <input
-              class="form-control"
-              type="text"
-              mwlFlatpickr
-              [(ngModel)]="event.start"
-              (ngModelChange)="refresh.next()"
-              [altInput]="true"
-              [convertModelValue]="true"
-              [enableTime]="true"
-              dateFormat="Y-m-dTH:i"
-              altFormat="F j, Y H:i"
-              placeholder="Not set"
-            />
-          </td>
-          <td>
-            <input
-              class="form-control"
-              type="text"
-              mwlFlatpickr
-              [(ngModel)]="event.end"
-              (ngModelChange)="refresh.next()"
-              [altInput]="true"
-              [convertModelValue]="true"
-              [enableTime]="true"
-              dateFormat="Y-m-dTH:i"
-              altFormat="F j, Y H:i"
-              placeholder="Not set"
-            />
-          </td>
-          <td>
-            <button class="btn btn-danger" (click)="deleteEvent(event)">
-              <i class="fa fa-delete" aria-hidden="true">Eliminar</i>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Estudiante</th>
+            <th>Prioridad</th>
+            <th>Tipo de evento</th>
+            <th>Hora Inicio</th>
+            <th>Hora de Fin</th>
+            <th>Eliminar</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let event of events">
+            <td>
+              <input type="text" class="form-control" [(ngModel)]="event.title" (keyup)="refresh.next()"/>
+            </td>
+            <td>
+              <input type="color" [(ngModel)]="event.color.primary"(change)="refresh.next()"/>
+            </td>
+            <td>
+            <input type="color" [(ngModel)]="event.color.secondary" (change)="refresh.next()"/>
+            </td>
+            <td>
+            <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.start" (ngModelChange)="refresh.next()"
+                   [altInput]="true" [convertModelValue]="true" [enableTime]="true" dateFormat="Y-m-dTH:i" altFormat="F j, Y H:i"
+                   placeholder="Not set"/>
+            </td>
+            <td>
+            <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.end" (ngModelChange)="refresh.next()"
+                   [altInput]="true" [convertModelValue]="true" [enableTime]="true" dateFormat="Y-m-dTH:i" altFormat="F j, Y H:i"
+                   placeholder="Not set"/>
+            </td>
+            <td>
+            <button class="btn btn-danger" (click)="deleteEvent(event)"><i class="fa fa-delete" aria-hidden="true">Eliminar</i>
             </button>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <ng-template #modalContent let-close="close">
+      <ng-template #modalContent let-close="close">
       <div class="modal-header">
         <h5 class="modal-title">Event action occurred</h5>
         <button type="button" class="close" (click)="close()">
@@ -315,22 +116,16 @@
         </button>
       </div>
       <div class="modal-body">
-        <div>
-          Action:
-          <pre>{{ modalData?.action }}</pre>
+        <div>Action:<pre>{{ modalData?.action }}</pre>
         </div>
-        <div>
-          Event:
-          <pre>{{ modalData?.event | json }}</pre>
+        <div>Event:<pre>{{ modalData?.event | json }}</pre>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" (click)="close()">
-          OK
-        </button>
+        <button type="button" class="btn btn-outline-secondary" (click)="close()">OK</button>
       </div>
     </ng-template>
-</div>
-</div>
+    </div>
+  </div>
 </div>
 </body>

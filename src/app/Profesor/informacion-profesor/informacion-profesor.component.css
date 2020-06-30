@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('src/assets/fondos/fondoProfe1.jpeg');
   background-repeat: no-repeat;
-  height: 91%;
+  height: 90%;
   background-size: cover;
   background-attachment: fixed;
 
@@ -17,5 +17,5 @@ body {
 }
 
 .opacity{
-  opacity:0.8; /* Opacidad 60% */
+  opacity:0.9; /* Opacidad 60% */
 }
