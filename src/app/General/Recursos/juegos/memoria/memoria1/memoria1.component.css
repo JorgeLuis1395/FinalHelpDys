@@ -9,16 +9,16 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('src/assets/fondos/fondo_pruebas.jpg');
+  background-image: url('src/assets/fondos/foto_fondo1_01.jpg');
   background-repeat: no-repeat;
-  height: 90%;
+  height: 91%;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Numans', sans-serif;
 }
 
 .opacity{
-  opacity:0.8; /* Opacidad 60% */
+  opacity:0.9; /* Opacidad 60% */
 }
 
 *{

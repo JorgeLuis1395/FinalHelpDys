@@ -9,53 +9,36 @@
     </div>
   </div>
 
-<div class="row">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-4" align="center"><img src="assets/img/{{ intentos }}.png" class="ahorcado-img" width="250"
-                                            height="250"></div>
-  <div class="col-sm-2"></div>
-  <div class="col-sm-4"><img src="assets/recursos/ahorcado/{{ imagen }}" width="150" height="150"></div>
-</div>
-<div class="row">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-3" align="center">
-    <h3>Intentos
-      <small> {{ intentos }} / 9</small>
-    </h3>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4" align="center"><img src="assets/img/{{ intentos }}.png" class="ahorcado-img" width="250"
+                                              height="250"></div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4"><img src="assets/recursos/ahorcado/{{ imagen }}" width="150" height="150"></div>
   </div>
-  <div class="col-sm-2"></div>
-  <div class="col-sm-4">
-    <h1> {{ palabraOculta }} </h1>
 
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-3" align="center">
+      <h3><b>Intentos {{ intentos }} / 9</b></h3>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <h1> <b>{{ palabraOculta }}</b> </h1>
+    </div>
   </div>
-</div>
-
-<div class="row" *ngIf="gano">
-
-</div>
-
-<div class="row" *ngIf="perdio">
-
-</div>
-
-
-<div class="row" *ngIf="!gano && !perdio">
-  <div class="col text-center">
-
-
-    <button (click)="comprobar( letra )" *ngFor="let letra of letras" class="btn btn-primary">
-      {{ letra }}
-    </button>
-
-
+  <div class="row" *ngIf="gano"></div>
+  <div class="row" *ngIf="perdio"></div>
+  <div class="row" *ngIf="!gano && !perdio">
+    <div class="col text-center">
+      <button (click)="comprobar( letra )" *ngFor="let letra of letras" class="btn btn-primary">{{ letra }}</button>
+    </div>
   </div>
-</div>
-<br>
-<br>
-<div class="row">
-  <div class="col-sm-12" align="center">
-    <button class="btn btn-dark btn-primary" (click)="consultarNuevaPalabra()">Siguiente Palabra</button>
+  <br><br>
+  <div class="row">
+    <div class="col-sm-12" align="center">
+      <button class="btn btn-dark btn-primary" (click)="consultarNuevaPalabra()">Siguiente Palabra</button>
+    </div>
   </div>
-</div>
 </div>
 </body>
