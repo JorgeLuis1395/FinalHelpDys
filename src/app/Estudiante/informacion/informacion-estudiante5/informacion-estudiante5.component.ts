@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./informacion-estudiante5.component.css']
 })
 export class InformacionEstudiante5Component implements OnInit {
-
   mostrarComponente = false;
   mostrarComponente1 = false;
   mostrarComponente2 = false;

@@ -17,7 +17,7 @@ body {
 
 a{
   color: #2e37ff;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 p{
@@ -29,5 +29,5 @@ h3{
 }
 
 .opacity{
-  opacity:0.8; /* Opacidad 60% */
+  opacity:0.9; /* Opacidad 60% */
 }

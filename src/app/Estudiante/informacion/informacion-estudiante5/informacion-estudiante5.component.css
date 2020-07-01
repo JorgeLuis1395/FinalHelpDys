@@ -9,12 +9,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("src/assets/fondos/fondo_pruebas.jpg");
   background-repeat: no-repeat;
-  height: 90%;
+  height: 120%;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Numans', sans-serif;
 }
 
 .opacity{
-  opacity:0.8; /* Opacidad 60% */
+  opacity:0.9; /* Opacidad 60% */
 }
+h6{
+  font-size: 18px;
+}
+h7{
+  font-size: 15px;
+}
+

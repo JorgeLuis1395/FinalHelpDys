@@ -16,5 +16,9 @@ body {
 }
 
 .opacity{
-  opacity:0.8; /* Opacidad 60% */
+  opacity:0.9; /* Opacidad 90% */
+}
+
+h6{
+  font-size: 18px;
 }
