@@ -1,10 +1,10 @@
-* {
+/* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-/*ingreso sin registro*/
+/*ingreso sin registro
 a {
   font-family: Poppins-Regular;
   font-size: 16px;
@@ -25,15 +25,12 @@ a:hover {
   text-decoration: none;
   color: #6675df;
 }
-
-/*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
   margin: 0px;
 }
-
 p {
   font-family: Poppins-Regular;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
   color: #666666;
   margin: 0px;
@@ -46,6 +43,7 @@ ul, li {
 
 
 /*---------------------------------------------*/
+
 input {
   outline: none;
   border: none;
@@ -101,11 +99,6 @@ iframe {
   border: none !important;
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ utility ]*/
-
-/*==================================================================
-[ Text ]*/
 .txt1 {
   font-family: Montserrat-Regular;
   font-size: 13px;
@@ -122,9 +115,9 @@ iframe {
 
 
 /*==================================================================
-[ Size ]*/
+[ Size ]
 .size1 {
-  width: 300px;
+  width: 100px;
   max-width: 100%;
 }
 
@@ -133,18 +126,21 @@ iframe {
 }
 
 /*==================================================================
-[ Background ]*/
+[ Background ]
+
 .bg1 {background: #3b5998;}
 .bg2 {background: #1da1f2;}
 .bg3 {background: #cd201f;}
-
+*/
 
 /*//////////////////////////////////////////////////////////////////
-[ login ]*/
+[ login ]
+
 .limiter {
-  width: 100%;
+  width: 50%;
   margin: 0 auto;
 }
+*/
 
 .wrap-login100 {
   width: 100%;
@@ -172,7 +168,7 @@ iframe {
   z-index: 1;
 }
 
-.login100-more::before {
+/*.login100-more::before {
   content: "";
   display: block;
   position: absolute;
@@ -182,11 +178,11 @@ iframe {
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.1);
-}
+}*/
 
 .login100-form {
   width: 560px;
-  min-height: 100vh;
+  min-height: 25vh;
   display: block;
   background-color: #f7f7f7;
   padding: 173px 55px 55px 55px;
@@ -198,11 +194,9 @@ iframe {
   font-family: "Arial Black";
   font-size: 10px;
   color: #333333;
-  line-height: 1.2;
+  line-height: 0;
   text-align: center;
 }
-
-
 
 /*------------------------------------------------------------------
 [ Input ]*/
@@ -216,19 +210,18 @@ iframe {
   flex-wrap: wrap;
   align-items: flex-end;
   width: 90%;
-  height: 80px;
+  height: 40px;
   position: relative;
   border: 1px solid #e6e6e6;
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
+/*
 .label-input100 {
   font-family: Montserrat-Regular;
   font-size: 18px;
   color: #999999;
   line-height: 1.2;
-
   display: block;
   position: absolute;
   pointer-events: none;
@@ -242,10 +235,11 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
+*/
 
 .input100 {
   display: block;
-  width: 100%;
+  width: 50%;
   background: transparent;
   font-family: Montserrat-Regular;
   font-size: 18px;

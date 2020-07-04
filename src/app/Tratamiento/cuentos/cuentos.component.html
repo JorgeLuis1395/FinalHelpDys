@@ -9,13 +9,13 @@
     </div>
   </div>
   <div class="col-sm-12">
-    <div class="card mb-3 opacity" align="center" style="margin-top: 0px">
+    <div class="card mb-3 opacity" align="center" >
+      <br>
       <div class="container">
         <div class="row">
           <div class="col-sm-3"  *ngFor=" let nombre of aux">
-            <div class="card" (click)="irCuento(nombre.id)" routerLink="/tratamiento/cuentos/contenido" style="height: 225px; width: 175px">
-              <div align="center" height="100" width="100"><img [src]="nombre?.portada" height="120px" width="90px"
-                                                                alt="Card image cap"></div>
+            <div class="card" (click)="irCuento(nombre.id)" routerLink="/general/cuentos/contenido" style="height: 225px; width: 175px">
+              <div align="center"><img [src]="nombre?.portada" height="120px" width="90px" alt="Card image cap"></div>
               <div class="card-body">
                 <h5 class="card-title" style="text-align: center"><b>{{nombre?.cuento}}</b></h5>
               </div>
