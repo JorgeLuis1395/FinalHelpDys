@@ -1,4 +1,8 @@
 body {
+  width:100%;
+  margin:auto;
+  min-width:600px;
+  max-width:2000px;
   background: #1e73b8; /* fallback for old browsers */
   background: -webkit-linear-gradient(right, #2330b8, #437dc2);
   background: -moz-linear-gradient(right, #2a54b8, #1b36c2);
